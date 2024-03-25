@@ -1,0 +1,20 @@
+#root {
+  max-width: 1280px;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.text {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  filter: blur(5px);
+  transform: translateY(100px);
+}
+.showtext {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 1s ease-in-out;
+}
