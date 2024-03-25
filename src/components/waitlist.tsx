@@ -8,7 +8,7 @@ const Waitlist: React.FC<CookiePopupProps> = ({ onClose }) => {
   return (
     <div
       style={{
-        position: "absolute",
+        position: "fixed",
         background: "rgba(0,0,0,0.7)",
         height: "100vh",
         width: "100vw",
