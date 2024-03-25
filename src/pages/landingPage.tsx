@@ -27,7 +27,7 @@ function LandingPage() {
     <div className="flex flex-col items-center pt-[70px] md:pt-[100px]">
       <div className="p-[16px] md:mt-[24px] md:flex md:items-center md:justify-center lg:w-[1100px] md:w-[90%]">
         <div>
-          <h1 className="text-[5vw] lg:text-[3.5vw] md:text-[4vw] text-left w-[90%] md:w-[80%] font-bold">
+          <h1 className="text-[6.5vw] lg:text-[3.5vw] md:text-[4vw] text-left w-[90%] md:w-[80%] font-bold">
             Enjoy Convenient Payment Transactions as a business owner or
             customer.
           </h1>
@@ -43,7 +43,7 @@ function LandingPage() {
       </div>
 
       <div className="p-[16px] lg:w-[1100px] md:w-[90%] md:mt-[32px]">
-        <h1 className="text-[5vw] lg:text-[2.5vw] md:text-[3vw] text-left w-[90%] lg:w-[80%] font-bold">
+        <h1 className="text-[6.5vw] lg:text-[2.5vw] md:text-[3vw] text-left w-[90%] lg:w-[80%] font-bold">
           One-stop solution for all payments
         </h1>
         <div className="lg:flex lg:justify-between lg:mt-[16px]">
@@ -89,7 +89,7 @@ function LandingPage() {
 
       <div className="p-[16px] md:mt-[24px] md:flex md:items-center md:justify-center lg:w-[1100px] md:w-[90%]">
         <div>
-          <h1 className="text-[5vw] lg:text-[2.5vw] md:text-[3vw] text-left w-[90%] md:w-[80%] font-bold">
+          <h1 className="text-[5.5vw] lg:text-[2.5vw] md:text-[3vw] text-left w-[90%] md:w-[80%] font-bold">
             We are committed to your safety and earnings
           </h1>
           <p className="text-left w-[50%] md:w-[90%] mt-[16px]">
@@ -180,7 +180,7 @@ function LandingPage() {
 
           <div className="mt-[24px] lg:w-[22%]">
             <p className="bg-custom-primary w-[30px] h-[30px] flex flex-col items-center justify-center text-[14px] text-white rounded-[50px]">
-              3
+              4
             </p>
             <p className="my-[8px] font-bold text-custom-primary">
               Pay for Bills and Utilities
