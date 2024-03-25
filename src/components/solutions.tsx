@@ -5,6 +5,7 @@ import contactless from "../assets/contactless.svg";
 import digital from "../assets/digital.svg";
 import protection from "../assets/protection.svg";
 import SignUp from "../buttons/signUp";
+import SolutionsCard from "./solutionsCard";
 
 interface CookiePopupProps {
   onOpen: () => void;
@@ -18,43 +19,29 @@ const Solutions: React.FC<CookiePopupProps> = ({ onOpen }) => {
           One-stop solution for all payments
         </h1>
         <div className="lg:flex lg:justify-between lg:mt-[16px]">
-          <div className="bg-custom-secondary p-[16px] rounded-[10px] mt-[16px] lg:w-[32%]">
-            <img src={contactless} className="mb-[8px]" />
-            <h2 className="font-bold text-[4vw] lg:text-[20px] md:text-[19px] w-[70%] text-custom-primary">
-              Contactless Payments Made Easy
-            </h2>
-            <p className="mt-[8px]">
-              Our platform supports QR code payments, allowing customers to
+          <SolutionsCard
+            image={contactless}
+            heading="Contactless Payments Made Easy"
+            text=" Our platform supports QR code payments, allowing customers to
               simply scan and pay, and NFC (Tap to Pay) technology, make quick
               and secure payments by simply tapping their smartphones or
-              contactless cards, providing a seamless payment experience.
-            </p>
-          </div>
-
-          <div className="bg-custom-secondary p-[16px] rounded-[10px] mt-[16px] lg:w-[32%]">
-            <img src={digital} className="mb-[8px]" />
-            <h2 className="font-bold text-[4vw] lg:text-[20px] md:text-[19px] w-[70%] text-custom-primary">
-              Digital Point of Sale (mPOS)
-            </h2>
-            <p className="mt-[8px]">
-              Our mobile Point of Sale (mPOS) solution eliminates the need for
-              expensive hardware and Businesses can accept card payments, track
-              sales, manage inventory, and generate detailed reports, all in one
-              user-friendly app.{" "}
-            </p>
-          </div>
-
-          <div className="bg-custom-secondary p-[16px] rounded-[10px] lg:w-[32%] mt-[16px]">
-            <img src={protection} className="mb-[8px]" />
-            <h2 className="font-bold text-[4vw] lg:text-[20px] md:text-[19px] w-[70%] text-custom-primary">
-              Enhanced Security and Fraud Protection
-            </h2>
-            <p className="mt-[8px]">
-              At Zojapay, security is our top priority. We employ robust
-              encryption and tokenization technologies to safeguard sensitive
-              customer data, ensuring secure transactions every time.
-            </p>
-          </div>
+              contactless cards, providing a seamless payment experience."
+          />
+          <SolutionsCard
+            image={digital}
+            heading=" Digital Point of Sale (mPOS)"
+            text="Our mobile Point of Sale (mPOS) solution eliminates the need for
+            expensive hardware and Businesses can accept card payments, track
+            sales, manage inventory, and generate detailed reports, all in one
+            user-friendly app."
+          />
+          <SolutionsCard
+            image={protection}
+            heading=" Enhanced Security and Fraud Protection"
+            text="At Zojapay, security is our top priority. We employ robust
+            encryption and tokenization technologies to safeguard sensitive
+            customer data, ensuring secure transactions every time."
+          />
         </div>
       </div>
 
