@@ -16,11 +16,14 @@ const CookiePopup: React.FC<CookiePopupProps> = ({ onClose }) => {
       }}
       className="flex flex-col items-center justify-center"
     >
-      <div className=" bg-white rounded-[10px] flex flex-col items-center p-[16px]">
+      <div className=" bg-white rounded-[10px] flex flex-col items-center p-[16px] w-[300px]">
         <p className="text-center">
           By using this website, you agree to our cookie policy
         </p>
-        <button onClick={onClose} className="mt-[16px] bg-custom-50 p-[8px] rounded-[5px]">
+        <button
+          onClick={onClose}
+          className="mt-[16px] bg-custom-50 p-[8px] rounded-[5px]"
+        >
           Dismiss
         </button>
       </div>

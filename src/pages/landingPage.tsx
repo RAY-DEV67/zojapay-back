@@ -103,14 +103,14 @@ function LandingPage() {
             <div>
               <div className="flex flex-col items-center">
                 <img src={image1} className="mb-[8px] lg:w-[70px]" />
-                <p className="text-custom-primary text-center w-[200px] font-semibold lg:text-[18px]">
+                <p className="text-custom-primary text-center md:w-[200px] font-semibold lg:text-[18px]">
                   Turn your smartphone into a cash register
                 </p>
               </div>
 
               <div className="flex flex-col items-center mt-[16px]">
                 <img src={image2} className="mb-[8px] lg:w-[70px]" />
-                <p className="text-custom-primary text-center w-[200px] lg:text-[18px] font-semibold">
+                <p className="text-custom-primary text-center md:w-[200px] lg:text-[18px] font-semibold">
                   Accept payment anywhere, anytime with ease
                 </p>
               </div>
@@ -118,7 +118,7 @@ function LandingPage() {
 
             <div className="flex flex-col items-center">
               <img src={image3} className="mb-[8px] w-[150px] lg:w-[250px]" />
-              <p className="text-custom-primary text-center w-[200px] lg:text-[18px] font-semibold">
+              <p className="text-custom-primary text-center md:w-[200px] lg:text-[18px] font-semibold">
                 Simplify your every day business with our all-in-one app
               </p>
             </div>

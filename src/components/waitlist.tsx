@@ -18,7 +18,7 @@ const Waitlist: React.FC<CookiePopupProps> = ({ onClose }) => {
       }}
       className="flex flex-col items-center justify-center"
     >
-      <div className=" bg-white rounded-[10px] w-[80vw] lg:w-[40vw] p-[16px]">
+      <div className=" bg-white rounded-[10px] w-[85vw] lg:w-[40vw] p-[16px]">
         <div className="flex justify-between w-[100%]">
           <p className="text-center font-bold">Join Waitlist</p>
           <p className="cursor-pointer" onClick={onClose}>
