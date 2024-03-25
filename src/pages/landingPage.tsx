@@ -127,11 +127,11 @@ function LandingPage() {
       </div>
 
       <div className="p-[16px] lg:w-[1100px] md:w-[90%] md:mt-[32px]" id="features">
-        <h3 className="text-[4vw] lg:text-[2.5vw] md:text-[3vw] text-center w-[90%] font-bold">
+        <h3 className="text-[6vw] lg:text-[2.5vw] md:text-[3vw] text-center w-[90%] font-bold">
           Key Features
         </h3>
 
-        <div className="mt-[16px] p-[16px] lg:flex lg:justify-between ">
+        <div className="p-[16px] lg:flex lg:justify-between ">
           <div className="mt-[24px] lg:w-[22%]">
             <p className="bg-custom-primary w-[30px] h-[30px] flex flex-col items-center justify-center text-[14px] text-white rounded-[50px]">
               1
