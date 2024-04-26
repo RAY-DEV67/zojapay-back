@@ -5,6 +5,7 @@ import FeaturesTab from "./components/featuresTab";
 import SignUp from "./pages/signUp";
 import ConfirmEmail from "./pages/confirmEmail";
 import EmailVerified from "./pages/emailVerified";
+import OTPVerification from "./pages/otpVerification";
 
 const App: React.FC = () => {
   return (
@@ -19,7 +20,8 @@ const App: React.FC = () => {
             <Route path="/" element={<LandingPage />} />
             <Route path="/Sign Up" element={<SignUp />} />
             <Route path="/Confirm Email" element={<ConfirmEmail />} />
-            <Route path="/Email Verified" element={<EmailVerified />} />
+            <Route path="/Email-Verified" element={<EmailVerified />} />
+            <Route path="/Verify-otp" element={<OTPVerification />} />
           </Routes>
         </ScrollToTop>
         <FeaturesTab />

@@ -6,6 +6,7 @@ interface EmailContainerProps {
   text: string;
   cta: string;
   navigate: string;
+  image: string;
   confirmEmail: boolean;
 }
 
@@ -15,10 +16,12 @@ const EmailContainer: React.FC<EmailContainerProps> = ({
   text,
   navigate,
   confirmEmail,
+  image,
 }) => {
   return (
     <div className="flex flex-col justify-center w-[97vw] lg:w-[50vw] items-center h-[100vh] bg-custom-gray">
-      <div className="bg-white shadow-2xl p-[32px] border rounded-[10px] w-[80vw] flex flex-col justify-center items-center lg:w-[70%]">
+      <div className="bg-white shadow-2xl px-[32px] py-[64px] border rounded-[10px] w-[80vw] flex flex-col justify-center items-center lg:w-[70%]">
+        <img src={image} alt="mail" className="mb-[16px]" />
         <p className="font-bold text-[25px] text-center">{heading}</p>
         <p className="text-[14px] mt-[4px] text-center w-[85%] font-semibold text-custom-darkGray">
           {text}
@@ -34,7 +37,7 @@ const EmailContainer: React.FC<EmailContainerProps> = ({
         </div>
 
         {confirmEmail && (
-          <p className="mt-[64px] text-center font-bold text-[12px] text-custom-darkGray">
+          <p className="mt-[32px] text-center font-bold text-[12px] text-custom-darkGray">
             Didnt get the mail?{" "}
             <span className="text-custom-primary">Resend</span>{" "}
           </p>
