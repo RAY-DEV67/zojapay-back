@@ -1,87 +1,34 @@
-import SignUp from "../buttons/signUp";
-
-interface CookiePopupProps {
-  onOpen: () => void;
+interface InputProps {
+  Text: string;
 }
 
-const Features: React.FC<CookiePopupProps> = ({ onOpen }) => {
+const Features: React.FC<InputProps> = ({ Text }) => {
   return (
-    <>
-      <div
-        className="p-[16px] lg:w-[1100px] md:w-[90%] md:mt-[32px]"
-        id="features"
+    <div className="flex flex-row mt-[24px]">
+      <svg
+        width="30px"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <h3 className="text-[6vw] lg:text-[2.5vw] md:text-[3vw] text-center w-[90%] font-bold">
-          Key Features
-        </h3>
-
-        <div className="p-[16px] lg:flex lg:justify-between ">
-          <div className="mt-[24px] lg:w-[22%]">
-            <p className="bg-custom-primary w-[30px] h-[30px] flex flex-col items-center justify-center text-[14px] text-white rounded-[50px]">
-              1
-            </p>
-            <p className="my-[8px] font-bold text-custom-primary">
-              Contactless payments
-            </p>
-            <p>
-              Make secure and convenient payments with our contactless payment
-              options. Scan QR codes or simply tap your phone to pay,
-              eliminating the need for physical cash or cards. Experience fast
-              and seamless transactions with the power of QR code and NFC
-              technology.
-            </p>
-          </div>
-
-          <div className="mt-[24px] lg:w-[22%]">
-            <p className="bg-custom-primary w-[30px] h-[30px] flex flex-col items-center justify-center text-[14px] text-white rounded-[50px]">
-              2
-            </p>
-            <p className="my-[8px] font-bold text-custom-primary">
-              Super Agent
-            </p>
-            <p>
-              Become a Zojapay Super Agent and unlock a world of opportunities.
-              Earn additional income by offering financial services to your
-              community. Provide services such as cash deposits, withdrawals,
-              and transfers, making a difference in people's lives.
-            </p>
-          </div>
-
-          <div className="mt-[24px] lg:w-[22%]">
-            <p className="bg-custom-primary w-[30px] h-[30px] flex flex-col items-center justify-center text-[14px] text-white rounded-[50px]">
-              3
-            </p>
-            <p className="my-[8px] font-bold text-custom-primary">
-              Fund Wallet
-            </p>
-            <p>
-              Easily load funds into your Zojapay wallet and enjoy hassle-free
-              transactions. Link your bank account or use other convenient
-              methods to add money to your wallet. Access your funds instantly
-              for payments, transfers, and other financial activities.
-            </p>
-          </div>
-
-          <div className="mt-[24px] lg:w-[22%]">
-            <p className="bg-custom-primary w-[30px] h-[30px] flex flex-col items-center justify-center text-[14px] text-white rounded-[50px]">
-              4
-            </p>
-            <p className="my-[8px] font-bold text-custom-primary">
-              Pay for Bills and Utilities
-            </p>
-            <p>
-              Easily load funds into your Zojapay wallet and enjoy hassle-free
-              transactions. Link your bank account or use other convenient
-              methods to add money to your wallet. Access your funds instantly
-              for payments, transfers, and other financial activities.
-            </p>
-          </div>
-        </div>
-        <div className="flex-col flex items-center">
-          <SignUp onOpen={onOpen} />
-        </div>
-      </div>
-    </>
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          {" "}
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
+            fill="#ff8600"
+          ></path>{" "}
+        </g>
+      </svg>
+      <p className="w-[100%] ml-[8px]">{Text}</p>
+    </div>
   );
 };
 

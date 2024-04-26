@@ -1,36 +1,29 @@
-import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ScrollToTop } from "./components/scrollToTop";
-import Navbar from "./components/navbar";
 import LandingPage from "./pages/landingPage";
-import CookiePopup from "./components/cookiePopUp";
+import FeaturesTab from "./components/featuresTab";
+import SignUp from "./pages/signUp";
+import ConfirmEmail from "./pages/confirmEmail";
+import EmailVerified from "./pages/emailVerified";
 
 const App: React.FC = () => {
-  const [showCookiePopup, setShowCookiePopup] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowCookiePopup(true);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleCloseCookiePopup = () => {
-    setShowCookiePopup(false);
-  };
-
   return (
-    <div>
+    <div
+      style={{
+        fontFamily: "Mulish",
+      }}
+    >
       <Router>
         <ScrollToTop>
-          <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/Sign Up" element={<SignUp />} />
+            <Route path="/Confirm Email" element={<ConfirmEmail />} />
+            <Route path="/Email Verified" element={<EmailVerified />} />
           </Routes>
         </ScrollToTop>
+        <FeaturesTab />
       </Router>
-      {showCookiePopup && <CookiePopup onClose={handleCloseCookiePopup} />}
     </div>
   );
 };
