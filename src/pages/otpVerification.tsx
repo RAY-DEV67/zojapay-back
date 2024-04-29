@@ -4,11 +4,14 @@ import CTAButton from "../buttons/cta";
 function OTPVerification() {
   const [code, setCode] = useState<string[]>(["", "", "", ""]);
 
-  //   const handleChange = (index: number, value: string) => {
-  //     const newCode = [...code];
-  //     newCode[index] = value;
-  //     setCode(newCode);
-  //   };
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    index: number
+  ) => {
+    const newCode = [...code];
+    newCode[index] = event.target.value;
+    setCode(newCode);
+  };
 
   return (
     <div className="flex flex-col items-center lg:flex-row-reverse">
@@ -20,8 +23,11 @@ function OTPVerification() {
             <span className="text-custom-primary">Seyi@zojatech.com</span>
           </p>
           <div className="flex w-[90%] justify-between">
-            {code.map((digit, index) => (
+            {code.map((value, index) => (
               <input
+                key={index}
+                value={value}
+                onChange={(event) => handleChange(event, index)}
                 type="number"
                 className="border text-[15px] font-semibold border-custom-inactiveGray w-[50px] flex mt-[16px] rounded-[5px] p-[8px]"
               />

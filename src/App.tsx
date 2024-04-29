@@ -6,17 +6,11 @@ import SignUp from "./pages/signUp";
 import ConfirmEmail from "./pages/confirmEmail";
 import EmailVerified from "./pages/emailVerified";
 import OTPVerification from "./pages/otpVerification";
-import { useSelector } from "react-redux";
-import { RootState } from "./redux/store";
 import Dashboard from "./pages/dashboard";
 import Navbar from "./components/navbar";
 import Login from "./pages/login";
 
 const App: React.FC = () => {
-  const authState = useSelector(
-    (state: RootState) => state.authState.isAuthenticated
-  );
-
   return (
     <div
       style={{

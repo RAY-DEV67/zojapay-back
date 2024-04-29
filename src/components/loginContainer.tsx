@@ -1,5 +1,4 @@
 import Input from "./input";
-import name from "../assets/name.png";
 import mail from "../assets/mail.png";
 import password from "../assets/password.png";
 import CTAButton from "../buttons/cta";
