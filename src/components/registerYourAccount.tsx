@@ -132,7 +132,9 @@ function RegisterYourAccount() {
 
         <p className="mt-[64px] font-bold text-[12px] text-custom-darkGray">
           Already have an account?{" "}
-          <span className="text-custom-primary">Login</span>{" "}
+          <Link to="/Login" className="text-custom-primary">
+            Login
+          </Link>{" "}
         </p>
       </div>
     </div>

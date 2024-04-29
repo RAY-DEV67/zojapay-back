@@ -5,35 +5,19 @@ import password from "../assets/password.png";
 import CTAButton from "../buttons/cta";
 import { Link } from "react-router-dom";
 
-function SignUpContainer() {
+function LoginContainer() {
   return (
     <div className="flex flex-col w-[97vw] lg:w-[50vw] justify-center items-center h-[100vh] bg-custom-gray">
       <div className="bg-white shadow-2xl p-[40px] border rounded-[10px] w-[80vw] lg:w-[70%]">
-        <p className="font-bold text-[20px]">Register your account</p>
+        <p className="font-bold text-[20px]">Log in to your account</p>
         <p className="text-[14px] mt-[4px]">
-          Proceed to create account and setup your organisation
+          Proceed to log in to your account
         </p>
-        <div className="flex flex-row justify-between relative">
-          <Input
-            placeholder="First Name"
-            type="text"
-            icon={name}
-            width="[95%]"
-            iconPosition="[35px]"
-          />
-          <Input
-            icon={name}
-            placeholder="Last Name"
-            type="text"
-            width="[95%]"
-            iconPosition="[35px]"
-          />
-        </div>
 
         <Input
           icon={mail}
           iconPosition="1/2"
-          placeholder="Work email"
+          placeholder="Email"
           type="text"
           width="[98%]"
         />
@@ -46,10 +30,10 @@ function SignUpContainer() {
         />
 
         <CTAButton
-          text="Create account"
+          text="Login"
           textColor="otherGray"
           bgColor="inactiveGray"
-          navigate="/Confirm Email"
+          navigate="/Dashboard"
           width="98%"
           // onClick={}
         />
@@ -61,14 +45,14 @@ function SignUpContainer() {
         </p>
 
         <p className="mt-[64px] font-bold text-[12px] text-custom-darkGray">
-          Already have an account?{" "}
-          <Link to="/Login" className="text-custom-primary">
-            Login
-          </Link>
+          Dont have an account?{" "}
+          <Link to="/Sign Up" className="text-custom-primary">
+            Register
+          </Link>{" "}
         </p>
       </div>
     </div>
   );
 }
 
-export default SignUpContainer;
+export default LoginContainer;

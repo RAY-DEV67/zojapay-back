@@ -1,9 +1,18 @@
 import Features from "./features";
 import logo from "../assets/buddyLogo.png";
+import { useLocation } from "react-router-dom";
 
 function FeaturesTab() {
+  const location = useLocation();
+
   return (
-    <div className="flex flex-col relative lg:fixed left-0 top-0 w-[97vw] p-[64px] lg:py-[90px] lg:px-[100px] h-[100vh] lg:w-[50vw]">
+    <div
+      className={`flex-col ${
+        location.pathname === "/Dashboard" || location.pathname === "/Messages"
+          ? "hidden"
+          : "flex"
+      } relative lg:fixed left-0 top-0 w-[97vw] p-[64px] lg:py-[90px] lg:px-[100px] h-[100vh] lg:w-[50vw]`}
+    >
       <img src={logo} alt="logo" className="w-[100px] mb-[32px]" />
       <Features Text="Track real-time overview of company's financial performance" />
       <Features Text="Track created projects budget against actual revenue and expenses" />
