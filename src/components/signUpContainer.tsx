@@ -43,7 +43,7 @@ function SignUpContainer() {
 
   return (
     <div className="flex flex-col w-[97vw] lg:w-[50vw] justify-center items-center h-[100vh] bg-custom-gray">
-      <div className="bg-white shadow-2xl p-[40px] border rounded-[10px] w-[80vw] lg:w-[70%]">
+      <div className="bg-white shadow-2xl p-[24px] lg:p-[40px] border rounded-[10px] w-[90vw] lg:w-[70%]">
         <p className="font-bold text-[20px]">Register your account</p>
         <p className="text-[14px] mt-[4px]">
           Proceed to create account and setup your organisation
@@ -55,8 +55,8 @@ function SignUpContainer() {
             placeholder="First Name"
             type="text"
             icon={name}
-            width="[95%]"
-            iconPosition="[35px]"
+            width="95%"
+            iconPosition="35px"
           />
           <Input
             value={lastName}
@@ -64,8 +64,8 @@ function SignUpContainer() {
             icon={name}
             placeholder="Last Name"
             type="text"
-            width="[95%]"
-            iconPosition="[35px]"
+            width="95%"
+            iconPosition="35px"
           />
         </div>
 
@@ -73,25 +73,25 @@ function SignUpContainer() {
           value={email}
           setvalue={setemail}
           icon={mail}
-          iconPosition="1/2"
+          iconPosition="20px"
           placeholder="Work email"
           type="text"
-          width="[98%]"
+          width="98%"
         />
         <Input
           value={userPassword}
           setvalue={setuserPassword}
           icon={password}
-          iconPosition="1/2"
+          iconPosition="20px"
           placeholder="Password"
           type="text"
-          width="[98%]"
+          width="98%"
         />
 
         <CTAButton
           text="Create account"
-          textColor="otherGray"
-          bgColor="inactiveGray"
+          textColor="#c3c7ce"
+          bgColor="#eceded"
           width="98%"
           onClick={registerUser}
           loading={loading}
@@ -103,7 +103,7 @@ function SignUpContainer() {
           <span className="text-custom-primary">Privacy Policy</span>
         </p>
 
-        <p className="mt-[64px] font-bold text-[12px] text-custom-darkGray">
+        <p className="mt-[32px] font-bold text-[12px] text-custom-darkGray">
           Already have an account?{" "}
           <Link to="/login" className="text-custom-primary">
             Login

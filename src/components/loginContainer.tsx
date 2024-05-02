@@ -78,7 +78,7 @@ function LoginContainer() {
           <span className="text-custom-primary">Privacy Policy</span>
         </p>
 
-        <p className="mt-[64px] font-bold text-[12px] text-custom-darkGray">
+        <p className="mt-[32px] font-bold text-[12px] text-custom-darkGray">
           Dont have an account?{" "}
           <Link to="/sign-up" className="text-custom-primary">
             Register
