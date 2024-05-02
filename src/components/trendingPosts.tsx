@@ -10,8 +10,8 @@ const TrendingPosts: React.FC<TrendingPostsProps> = ({ heading, text }) => {
   return (
     <div className="flex flex-col lg:flex-row lg:justify-between">
       <div className="border p-[16px] mt-[16px] lg:mt-[0px] rounded-[20px] lg:w-[28vw]">
-        <p className="text-[20px] font-bold">{heading}</p>
-        <p className="text-custom-darkGray font-semibold">{text}</p>
+        <p className="text-[16px] font-bold">{heading}</p>
+        <p className="text-custom-darkGray font-semibold text-[14px]">{text}</p>
         <div className="flex flex-row mt-[16px]">
           <div className="bg-[#f6f6f6] py-[4px] px-[16px] rounded-[50px] flex flex-row items-center">
             <svg
@@ -60,15 +60,15 @@ const TrendingPosts: React.FC<TrendingPostsProps> = ({ heading, text }) => {
                 </path>{" "}
               </g>
             </svg>
-            <p className="font-bold text-[14px] ml-[4px]">260</p>
+            <p className="font-bold text-[12px] ml-[4px]">260</p>
           </div>
           <div className="bg-[#f6f6f6] flex flex-row items-center py-[4px] px-[16px] rounded-[50px] mx-[16px]">
             <img src={comment} />
-            <p className="font-bold text-[14px] ml-[4px]">234</p>
+            <p className="font-bold text-[12px] ml-[4px]">234</p>
           </div>
           <div className="bg-[#f6f6f6] flex flex-row items-center py-[4px] px-[16px] rounded-[50px]">
             <img src={share} />
-            <p className="font-bold text-[14px] ml-[4px]">123</p>
+            <p className="font-bold text-[12px] ml-[4px]">123</p>
           </div>
         </div>
       </div>
