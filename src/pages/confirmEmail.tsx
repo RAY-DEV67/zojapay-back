@@ -10,7 +10,7 @@ function ConfirmEmail() {
         heading="Check your mailbox!"
         text="We've sent an email to seyi@zojatech.com with an otp to confirm your
             account. Check your inbox to activate your account."
-        navigate="/Verify-otp"
+        navigate="/verify-otp"
         confirmEmail={true}
       />
     </div>

@@ -1,8 +1,17 @@
 import { useState } from "react";
 import CTAButton from "../buttons/cta";
+import { useNavigate } from "react-router-dom";
 
 function OTPVerification() {
   const [code, setCode] = useState<string[]>(["", "", "", ""]);
+
+  const [loading, setloading] = useState(false);
+  const nav = useNavigate();
+
+  const onClick = () => {
+    setloading(true);
+    nav("/email-verified");
+  };
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -37,7 +46,8 @@ function OTPVerification() {
             text="Confirm Code"
             textColor="white"
             bgColor="primary"
-            navigate="/Email-Verified"
+            loading={loading}
+            onClick={onClick}
             width="[50%]"
           />
           <p className="mt-[24px] font-bold text-[12px] text-custom-darkGray">

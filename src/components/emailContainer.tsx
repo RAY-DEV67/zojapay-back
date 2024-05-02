@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import CTAButton from "../buttons/cta";
+import { useNavigate } from "react-router-dom";
 
 interface EmailContainerProps {
   heading: string;
@@ -14,10 +15,18 @@ const EmailContainer: React.FC<EmailContainerProps> = ({
   cta,
   heading,
   text,
-  navigate,
   confirmEmail,
   image,
+  navigate,
 }) => {
+  const [loading, setloading] = useState(false);
+  const nav = useNavigate();
+
+  const onClick = () => {
+    setloading(true);
+    nav(navigate);
+  };
+
   return (
     <div className="flex flex-col justify-center w-[97vw] lg:w-[50vw] items-center h-[100vh] bg-custom-gray">
       <div className="bg-white shadow-2xl px-[32px] py-[64px] border rounded-[10px] w-[80vw] flex flex-col justify-center items-center lg:w-[70%]">
@@ -28,11 +37,12 @@ const EmailContainer: React.FC<EmailContainerProps> = ({
         </p>
         <div className="flex flex-col items-center w-[100%]">
           <CTAButton
+            loading={loading}
             text={cta}
             textColor="white"
             bgColor="primary"
-            navigate={navigate}
             width="[50%]"
+            onClick={onClick}
           />
         </div>
 

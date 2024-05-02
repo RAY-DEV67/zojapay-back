@@ -29,10 +29,10 @@ function Dashboard() {
 
   return (
     <div className="bg-[#f6f6f6] flex flex-col items-center lg:ml-[14.5vw] lg:items-start ">
-      <DashboardHeading />
-      <div className="w-[90vw] lg:w-[85vw] p-[16px] pt-[80px] lg:pt-[0px] flex flex-col items-center lg:items-start lg:flex-row">
+      <DashboardHeading heading="My Portfolio" />
+      <div className="w-[90vw] lg:w-[85vw] p-[16px] pt-[80px] lg:pt-[60px] flex flex-col items-center lg:items-start lg:flex-row">
         <div className="lg:w-[60vw]">
-          <div className="flex flex-row flex-wrap items-center justify-between h-[180px] lg:h-[80px] lg:flex-row">
+          <div className="flex flex-row flex-wrap lg:fixed items-center justify-between h-[180px] lg:h-[100px] lg:flex-row lg:w-[60vw] w-[85vw] bg-[#f6f6f6] py-[16px]">
             <DashboardCard
               number={51}
               text="Total Channels"
@@ -50,7 +50,7 @@ function Dashboard() {
             />
           </div>
 
-          <div className="bg-white p-[16px] rounded-[20px] mt-[16px]">
+          <div className="bg-white p-[16px] rounded-[20px] mt-[16px] lg:mt-[116px]">
             <div className="mb-[16px] flex flex-col lg:flex-row lg:justify-between lg:items-center">
               <p className="text-[20px] font-bold">Overview</p>
               <div className="flex flex-row mt-[16px] lg:mt-[0px] lg:w-[400px] justify-between">
@@ -157,8 +157,8 @@ function Dashboard() {
           </div>
         </div>
 
-        <div className="lg:ml-[16px] lg:w-[21vw]">
-          <div className="bg-white p-[16px] rounded-[20px] mt-[16px] lg:mt-[0px]">
+        <div className="lg:ml-[61vw] mt-[16px] overflow-y-scroll pb-[100px] w-[40vw] mr-[16px] lg:w-[22vw] hidden lg:flex flex-col fixed h-[100vh]">
+          <div className="bg-white p-[16px] rounded-[20px] mt-[16px] mr-[8px] lg:mt-[0px]">
             <div className="flex flex-row justify-between items-center">
               <p className="text-[20px] font-bold">Watchlist</p>
               <p className="text-[14px] text-custom-primary font-bold">
@@ -171,7 +171,7 @@ function Dashboard() {
             </div>
           </div>
 
-          <div className="bg-white mt-[16px] p-[16px] rounded-[20px]">
+          <div className="bg-white mt-[16px] mr-[8px] p-[16px] rounded-[20px]">
             <p className="text-[20px] font-bold">Revenue</p>
             <div className="flex flex-row flex-wrap items-center gap-y-3 mt-[16px] justify-between lg:flex-col">
               <RevenueCard
@@ -192,7 +192,7 @@ function Dashboard() {
             </div>
           </div>
 
-          <div className="bg-white mt-[16px] p-[16px] rounded-[20px]">
+          <div className="bg-white mt-[16px] mr-[8px] p-[16px] rounded-[20px]">
             <p className="text-[20px] font-bold">Trending News</p>
             <div className="flex flex-col items-center gap-y-3 mt-[16px] justify-between">
               <TrendingNewsCard

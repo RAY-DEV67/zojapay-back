@@ -1,7 +1,13 @@
-function DashboardHeading() {
+import React from "react";
+
+interface DashboardHeadingProps {
+  heading: string;
+}
+
+const DashboardHeading: React.FC<DashboardHeadingProps> = ({ heading }) => {
   return (
-    <div className="lg:flex p-[16px] justify-between items-center flex-row w-[84.5vw] hidden mb-[16px]">
-      <p className="text-[20px] font-bold">My Portfolio</p>
+    <div className="lg:flex bg-[#f6f6f6] p-[16px] justify-between items-center flex-row w-[84.5vw] hidden fixed">
+      <p className="text-[20px] font-bold">{heading}</p>
       <div className="flex flex-row items-center">
         <div className="relative">
           <input
@@ -64,6 +70,6 @@ function DashboardHeading() {
       </div>
     </div>
   );
-}
+};
 
 export default DashboardHeading;

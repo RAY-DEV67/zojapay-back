@@ -18,8 +18,8 @@ function Navbar() {
     <>
       <div
         className={`${
-          location.pathname === "/Dashboard" ||
-          location.pathname === "/Messages"
+          location.pathname === "/dashboard" ||
+          location.pathname === "/messages"
             ? "lg:flex hidden"
             : "hidden"
         } lg:fixed bg-white flex-col items-center justify-between lg:px-[10px] lg:py-[30px] h-[100vh] lg:w-[14.5vw]`}
@@ -27,16 +27,16 @@ function Navbar() {
         <div className="flex flex-col items-center">
           <img src={logo} alt="logo" className="mb-[24px]" />
           <Link
-            to="/Dashboard"
+            to="/dashboard"
             className={`flex flex-row items-center py-[8px] ${
-              location.pathname === "/Dashboard"
+              location.pathname === "/dashboard"
                 ? "bg-white shadow-lg px-[32px] rounded-[10px] mb-[8px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
             }`}
           >
             <img
               src={
-                location.pathname === "/Dashboard" ? portfolio : portfolioDark
+                location.pathname === "/dashboard" ? portfolio : portfolioDark
               }
               alt="portfolio"
               className="h-[15px] w-[15px]"
@@ -54,15 +54,15 @@ function Navbar() {
             <p className="ml-[4px] text-[14px] font-semibold">My Group</p>
           </div>
           <Link
-            to="/Messages"
+            to="/messages"
             className={`flex flex-row items-center py-[8px] ${
-              location.pathname === "/Messages"
+              location.pathname === "/messages"
                 ? "bg-white shadow-lg px-[32px] rounded-[10px] mb-[8px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
             }`}
           >
             <img
-              src={location.pathname === "/Messages" ? messagesLight : messages}
+              src={location.pathname === "/messages" ? messagesLight : messages}
               alt="portfolio"
             />
             <p className="ml-[4px] text-[14px] font-semibold">Messages</p>
@@ -115,8 +115,8 @@ function Navbar() {
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Adjust the values as per your requirement
         }}
         className={`${
-          location.pathname === "/Dashboard" ||
-          location.pathname === "/Messages"
+          location.pathname === "/dashboard" ||
+          location.pathname === "/messages"
             ? "lg:hidden flex"
             : "hidden"
         }  mt-[4px] fixed justify-between flex-row w-[100vw] bg-white py-[10px] px-[16px] rounded-[50px]`}

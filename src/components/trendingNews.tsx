@@ -13,8 +13,8 @@ const TrendingNewsCard: React.FC<TrendingNewsProps> = ({
     <div className="flex flex-row items-center w-[60vw] p-[12px] rounded-[10px] lg:w-[19vw] justify-between border">
       <img src={icon} />
       <div className="lg:w-[70%]">
-        <p className="text-[18px] lg:text-[14px] font-bold">{heading}</p>
-        <p className="text-[14px] text-custom-darkGray font-semibold">{text}</p>
+        <p className="text-[14px] lg:text-[13px] font-bold">{heading}</p>
+        <p className="text-[12px] text-custom-darkGray font-semibold">{text}</p>
       </div>
     </div>
   );

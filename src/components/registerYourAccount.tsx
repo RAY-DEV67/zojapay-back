@@ -6,7 +6,7 @@ function RegisterYourAccount() {
       <div className="bg-white shadow-2xl p-[32px] border rounded-[10px] w-[68vw] lg:w-[60%]">
         <p className="font-bold text-[20px]">Register your account</p>
         <Link
-          to="/Sign Up"
+          to="/sign-up"
           className="flex flex-row border mt-[16px] w-[100%] justify-center items-center py-[8px] rounded-[5px]"
         >
           <svg
@@ -132,7 +132,7 @@ function RegisterYourAccount() {
 
         <p className="mt-[64px] font-bold text-[12px] text-custom-darkGray">
           Already have an account?{" "}
-          <Link to="/Login" className="text-custom-primary">
+          <Link to="/login" className="text-custom-primary">
             Login
           </Link>{" "}
         </p>

@@ -2,9 +2,40 @@ import Input from "./input";
 import mail from "../assets/mail.png";
 import password from "../assets/password.png";
 import CTAButton from "../buttons/cta";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 function LoginContainer() {
+  const [email, setemail] = useState("");
+  const [userPassword, setuserPassword] = useState("");
+  const [loading, setloading] = useState(false);
+  const navigate = useNavigate();
+
+  const loginUser = () => {
+    setloading(true);
+    try {
+      axios
+        .post("https://fe-test.revvex.io/api/admin/login", {
+          email: email,
+          password: userPassword,
+        })
+        .then((result) => {
+          console.log(result.data);
+          navigate("/dashboard");
+          setloading(false);
+        })
+        .catch((err) => {
+          setloading(false);
+          console.log(err.response.data);
+        });
+    } catch (error) {
+      setloading(false);
+      console.error("Error registering user", error);
+      // Handle error, e.g., display error message
+    }
+  };
+
   return (
     <div className="flex flex-col w-[97vw] lg:w-[50vw] justify-center items-center h-[100vh] bg-custom-gray">
       <div className="bg-white shadow-2xl p-[40px] border rounded-[10px] w-[80vw] lg:w-[70%]">
@@ -14,6 +45,8 @@ function LoginContainer() {
         </p>
 
         <Input
+          value={email}
+          setvalue={setemail}
           icon={mail}
           iconPosition="1/2"
           placeholder="Email"
@@ -21,6 +54,8 @@ function LoginContainer() {
           width="[98%]"
         />
         <Input
+          value={userPassword}
+          setvalue={setuserPassword}
           icon={password}
           iconPosition="1/2"
           placeholder="Password"
@@ -32,9 +67,9 @@ function LoginContainer() {
           text="Login"
           textColor="otherGray"
           bgColor="inactiveGray"
-          navigate="/Dashboard"
           width="98%"
-          // onClick={}
+          loading={loading}
+          onClick={loginUser}
         />
 
         <p className="mt-[24px] font-semibold text-[12px] text-custom-darkGray">
@@ -45,7 +80,7 @@ function LoginContainer() {
 
         <p className="mt-[64px] font-bold text-[12px] text-custom-darkGray">
           Dont have an account?{" "}
-          <Link to="/Sign Up" className="text-custom-primary">
+          <Link to="/sign-up" className="text-custom-primary">
             Register
           </Link>{" "}
         </p>

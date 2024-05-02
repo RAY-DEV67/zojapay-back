@@ -1,11 +1,46 @@
+import axios from "axios";
 import Input from "./input";
 import name from "../assets/name.png";
 import mail from "../assets/mail.png";
 import password from "../assets/password.png";
 import CTAButton from "../buttons/cta";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function SignUpContainer() {
+  const [firstName, setfirstName] = useState("");
+  const [lastName, setlastName] = useState("");
+  const [email, setemail] = useState("");
+  const [userPassword, setuserPassword] = useState("");
+  const [loading, setloading] = useState(false);
+  const navigate = useNavigate();
+
+  const registerUser = () => {
+    setloading(true);
+    try {
+      axios
+        .post("https://fe-test.revvex.io/api/admin/register", {
+          first_name: firstName,
+          last_name: lastName,
+          email: email,
+          password: userPassword,
+        })
+        .then((result) => {
+          console.log(result.data);
+          navigate("/confirm-email");
+          setloading(false);
+        })
+        .catch((err) => {
+          console.log(err.response.data);
+          setloading(false);
+        });
+    } catch (error) {
+      setloading(false);
+      console.error("Error registering user", error);
+      // Handle error, e.g., display error message
+    }
+  };
+
   return (
     <div className="flex flex-col w-[97vw] lg:w-[50vw] justify-center items-center h-[100vh] bg-custom-gray">
       <div className="bg-white shadow-2xl p-[40px] border rounded-[10px] w-[80vw] lg:w-[70%]">
@@ -15,6 +50,8 @@ function SignUpContainer() {
         </p>
         <div className="flex flex-row justify-between relative">
           <Input
+            value={firstName}
+            setvalue={setfirstName}
             placeholder="First Name"
             type="text"
             icon={name}
@@ -22,6 +59,8 @@ function SignUpContainer() {
             iconPosition="[35px]"
           />
           <Input
+            value={lastName}
+            setvalue={setlastName}
             icon={name}
             placeholder="Last Name"
             type="text"
@@ -31,6 +70,8 @@ function SignUpContainer() {
         </div>
 
         <Input
+          value={email}
+          setvalue={setemail}
           icon={mail}
           iconPosition="1/2"
           placeholder="Work email"
@@ -38,6 +79,8 @@ function SignUpContainer() {
           width="[98%]"
         />
         <Input
+          value={userPassword}
+          setvalue={setuserPassword}
           icon={password}
           iconPosition="1/2"
           placeholder="Password"
@@ -49,9 +92,9 @@ function SignUpContainer() {
           text="Create account"
           textColor="otherGray"
           bgColor="inactiveGray"
-          navigate="/Confirm Email"
           width="98%"
-          // onClick={}
+          onClick={registerUser}
+          loading={loading}
         />
 
         <p className="mt-[24px] font-semibold text-[12px] text-custom-darkGray">
@@ -62,7 +105,7 @@ function SignUpContainer() {
 
         <p className="mt-[64px] font-bold text-[12px] text-custom-darkGray">
           Already have an account?{" "}
-          <Link to="/Login" className="text-custom-primary">
+          <Link to="/login" className="text-custom-primary">
             Login
           </Link>
         </p>

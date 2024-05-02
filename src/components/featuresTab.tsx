@@ -8,7 +8,7 @@ function FeaturesTab() {
   return (
     <div
       className={`flex-col ${
-        location.pathname === "/Dashboard" || location.pathname === "/Messages"
+        location.pathname === "/dashboard" || location.pathname === "/messages"
           ? "hidden"
           : "flex"
       } relative lg:fixed left-0 top-0 w-[97vw] p-[64px] lg:py-[90px] lg:px-[100px] h-[100vh] lg:w-[50vw]`}

@@ -2,7 +2,6 @@ import EmailContainer from "../components/emailContainer";
 import mail from "../assets/verifiedEmail.png";
 
 function EmailVerified() {
-
   return (
     <div className="flex flex-col items-center lg:flex-row-reverse">
       <EmailContainer
@@ -11,7 +10,7 @@ function EmailVerified() {
         heading="Email Verified"
         text="The verified email address will be associated with your account.
         Click on the button below to continue."
-        navigate="/Dashboard"
+        navigate="/dashboard"
         confirmEmail={false}
       />
     </div>
