@@ -19,7 +19,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
     <div
       onClick={onClick}
       style={{ width: width, backgroundColor: bgColor }}
-      className="flex flex-row cursor-pointer mt-[24px] justify-center items-center py-[8px] rounded-[5px]"
+      className="flex flex-row cursor-pointer mt-[24px] justify-center items-center py-[12px] rounded-[5px]"
     >
       <p
         style={{ color: textColor }}

@@ -56,7 +56,7 @@ function SignUpContainer() {
             type="text"
             icon={name}
             width="95%"
-            iconPosition="35px"
+            iconPosition="40px"
           />
           <Input
             value={lastName}
@@ -65,7 +65,7 @@ function SignUpContainer() {
             placeholder="Last Name"
             type="text"
             width="95%"
-            iconPosition="35px"
+            iconPosition="40px"
           />
         </div>
 
@@ -73,7 +73,7 @@ function SignUpContainer() {
           value={email}
           setvalue={setemail}
           icon={mail}
-          iconPosition="20px"
+          iconPosition="25px"
           placeholder="Work email"
           type="text"
           width="98%"
@@ -82,7 +82,7 @@ function SignUpContainer() {
           value={userPassword}
           setvalue={setuserPassword}
           icon={password}
-          iconPosition="20px"
+          iconPosition="25px"
           placeholder="Password"
           type="text"
           width="98%"

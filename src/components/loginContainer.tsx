@@ -48,7 +48,7 @@ function LoginContainer() {
           value={email}
           setvalue={setemail}
           icon={mail}
-          iconPosition="20px"
+          iconPosition="25px"
           placeholder="Email"
           type="text"
           width="98%"
@@ -57,7 +57,7 @@ function LoginContainer() {
           value={userPassword}
           setvalue={setuserPassword}
           icon={password}
-          iconPosition="20px"
+          iconPosition="25px"
           placeholder="Password"
           type="text"
           width="98%"
