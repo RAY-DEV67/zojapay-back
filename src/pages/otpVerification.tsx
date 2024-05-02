@@ -31,7 +31,7 @@ function OTPVerification() {
   return (
     <div className="flex flex-col items-center lg:flex-row-reverse">
       <div className="flex flex-col justify-center w-[97vw] lg:w-[50vw] items-center h-[100vh] bg-custom-gray">
-        <div className="bg-white shadow-2xl p-[40px] lg:p-[64px] border rounded-[10px] w-[90vw] lg:w-[60%]">
+        <div className="bg-white shadow-2xl p-[16px] lg:p-[64px] border rounded-[10px] w-[90vw] lg:w-[60%]">
           <p className="font-bold text-[25px]">Verify your Email</p>
           <p className="text-[14px] mt-[4px] font-semibold text-custom-darkGray">
             A four digit OTP code has been sent to your email{" "}
@@ -54,7 +54,7 @@ function OTPVerification() {
             bgColor="#ff8600"
             loading={loading}
             onClick={onClick}
-            width="50%"
+            width="60%"
           />
           <ResendMail email={email} token={token} />
         </div>

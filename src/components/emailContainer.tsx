@@ -35,10 +35,10 @@ const EmailContainer: React.FC<EmailContainerProps> = ({
 
   return (
     <div className="flex flex-col justify-center w-[97vw] lg:w-[50vw] items-center h-[100vh] bg-custom-gray">
-      <div className="bg-white shadow-2xl px-[32px] py-[64px] border rounded-[10px] w-[90vw] flex flex-col justify-center items-center lg:w-[70%]">
+      <div className="bg-white shadow-2xl px-[16px] lg:px-[32px] py-[64px] border rounded-[10px] w-[90vw] flex flex-col justify-center items-center lg:w-[70%]">
         <img src={image} alt="mail" className="mb-[16px]" />
         <p className="font-bold text-[25px] text-center">{heading}</p>
-        <p className="text-[14px] mt-[4px] text-center w-[85%] font-semibold text-custom-darkGray">
+        <p className="text-[14px] mt-[4px] text-center w-[90%] font-semibold text-custom-darkGray">
           {text}
         </p>
         <div className="flex flex-col items-center w-[100%]">
@@ -47,7 +47,7 @@ const EmailContainer: React.FC<EmailContainerProps> = ({
             text={cta}
             textColor="white"
             bgColor="#ff8600"
-            width="50%"
+            width="60%"
             onClick={onClick}
           />
         </div>
