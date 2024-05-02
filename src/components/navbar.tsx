@@ -119,7 +119,7 @@ function Navbar() {
           location.pathname === "/messages"
             ? "lg:hidden flex"
             : "hidden"
-        }  mt-[4px] fixed justify-between flex-row w-[100vw] bg-white py-[10px] px-[16px] rounded-[50px]`}
+        } fixed justify-between flex-row w-[100vw] bg-white py-[10px] px-[16px]`}
       >
         <svg
           width="25px"

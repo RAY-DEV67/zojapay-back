@@ -10,7 +10,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
   icon,
 }) => {
   return (
-    <div className="flex flex-row items-center w-[40vw] p-[12px] rounded-[10px] shadow-md lg:w-[19vw] justify-between bg-white">
+    <div className="flex flex-row items-center w-[90vw] p-[16px] lg:p-[12px] rounded-[10px] shadow-md lg:w-[19vw] justify-between bg-white">
       <div>
         <p className="text-[20px] font-bold">{number}</p>
         <p className="text-[14px] text-custom-darkGray font-semibold">{text}</p>
