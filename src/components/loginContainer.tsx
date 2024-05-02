@@ -38,7 +38,7 @@ function LoginContainer() {
 
   return (
     <div className="flex flex-col w-[97vw] lg:w-[50vw] justify-center items-center h-[100vh] bg-custom-gray">
-      <div className="bg-white shadow-2xl p-[40px] border rounded-[10px] w-[80vw] lg:w-[70%]">
+      <div className="bg-white shadow-2xl p-[24px] lg:p-[40px] border rounded-[10px] w-[90vw] lg:w-[70%]">
         <p className="font-bold text-[20px]">Log in to your account</p>
         <p className="text-[14px] mt-[4px]">
           Proceed to log in to your account
@@ -48,25 +48,25 @@ function LoginContainer() {
           value={email}
           setvalue={setemail}
           icon={mail}
-          iconPosition="1/2"
+          iconPosition="20px"
           placeholder="Email"
           type="text"
-          width="[98%]"
+          width="98%"
         />
         <Input
           value={userPassword}
           setvalue={setuserPassword}
           icon={password}
-          iconPosition="1/2"
+          iconPosition="20px"
           placeholder="Password"
           type="text"
-          width="[98%]"
+          width="98%"
         />
 
         <CTAButton
           text="Login"
-          textColor="otherGray"
-          bgColor="inactiveGray"
+          textColor="#c3c7ce"
+          bgColor="#eceded"
           width="98%"
           loading={loading}
           onClick={loginUser}

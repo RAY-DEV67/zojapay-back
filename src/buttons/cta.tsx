@@ -18,10 +18,12 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   return (
     <div
       onClick={onClick}
-      className={`flex flex-row cursor-pointer mt-[24px] w-${width} justify-center items-center py-[8px] rounded-[5px] bg-custom-${bgColor}`}
+      style={{ width: width, backgroundColor: bgColor }}
+      className="flex flex-row cursor-pointer mt-[24px] justify-center items-center py-[8px] rounded-[5px]"
     >
       <p
-        className={`font-semibold text-[14px] text-custom-${textColor} ml-[8px]`}
+        style={{ color: textColor }}
+        className="font-semibold text-[14px] ml-[8px]"
       >
         {loading ? "Loading.." : text}
       </p>
