@@ -14,7 +14,7 @@ const PotentialMembers: React.FC<PotentialMembersProps> = ({
   image,
 }) => {
   return (
-    <div className="border w-[35vw] lg:w-[11vw] p-[16px] rounded-[20px]">
+    <div className="border w-[40vw] lg:w-[11vw] p-[16px] rounded-[20px]">
       <div className="flex flex-col items-center">
         <img src={image} alt="avatar" />
         <p className="text-[16px] font-bold">{name}</p>
