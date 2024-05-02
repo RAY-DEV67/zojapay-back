@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import Input from "./input";
 import name from "../assets/name.png";
 import mail from "../assets/mail.png";

@@ -52,18 +52,18 @@ function Dashboard() {
 
           <div className="bg-white p-[16px] rounded-[20px] mt-[16px] lg:mt-[116px]">
             <div className="mb-[16px] flex flex-col lg:flex-row lg:justify-between lg:items-center">
-              <p className="text-[20px] font-bold">Overview</p>
+              <p className="text-[18px] font-bold">Overview</p>
               <div className="flex flex-row mt-[16px] lg:mt-[0px] lg:w-[400px] justify-between">
-                <p className="text-[14px] bg-custom-primary text-white py-[4px] px-[16px] rounded-[50px]">
+                <p className="text-[2.5vw] lg:text-[14px] bg-custom-primary text-white py-[4px] px-[16px] rounded-[50px]">
                   Robin Hood
                 </p>
-                <p className="text-[14px] bg-[#f6f6f6] py-[4px] px-[16px] rounded-[50px]">
+                <p className="text-[2.5vw] lg:text-[14px] bg-[#f6f6f6] py-[4px] px-[16px] rounded-[50px]">
                   Amretrade
                 </p>
-                <p className="text-[14px] bg-[#f6f6f6] py-[4px] px-[16px] rounded-[50px]">
+                <p className="text-[2.5vw] lg:text-[14px] bg-[#f6f6f6] py-[4px] px-[16px] rounded-[50px]">
                   Fidelity
                 </p>
-                <p className="text-[14px] bg-[#f6f6f6] py-[4px] px-[16px] rounded-[50px]">
+                <p className="text-[2.5vw] lg:text-[14px] bg-[#f6f6f6] py-[4px] px-[16px] rounded-[50px]">
                   Charles
                 </p>
               </div>
@@ -105,7 +105,7 @@ function Dashboard() {
           </div>
 
           <div className="bg-white p-[16px] mt-[16px] rounded-[20px]">
-            <p className="text-[20px] font-bold">Trending Posts</p>
+            <p className="text-[18px] font-bold">Trending Posts</p>
             <div className="flex flex-col lg:flex-row justify-between lg:mt-[24px]">
               <TrendingPosts
                 heading="8 Upcoming Influencer Marketing Trends and Benefits"
