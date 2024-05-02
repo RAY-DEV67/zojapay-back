@@ -11,7 +11,7 @@ function FeaturesTab() {
         location.pathname === "/dashboard" || location.pathname === "/messages"
           ? "hidden"
           : "flex"
-      } relative lg:fixed left-0 top-0 w-[97vw] p-[64px] lg:py-[90px] lg:px-[100px] h-[100vh] lg:w-[50vw]`}
+      } relative lg:fixed left-0 top-0 w-[97vw] p-[32px] lg:py-[90px] lg:px-[100px] h-[100vh] lg:w-[50vw]`}
     >
       <img src={logo} alt="logo" className="w-[100px] mb-[32px]" />
       <Features Text="Track real-time overview of company's financial performance" />

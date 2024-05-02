@@ -1,4 +1,3 @@
-
 import RegisterYourAccount from "../components/registerYourAccount";
 
 function LandingPage() {

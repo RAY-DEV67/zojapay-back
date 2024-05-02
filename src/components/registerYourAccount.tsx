@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function RegisterYourAccount() {
   return (
     <div className="flex flex-col w-[97vw] lg:w-[50vw] justify-center items-center h-[100vh] bg-custom-gray">
-      <div className="bg-white shadow-2xl p-[32px] border rounded-[10px] w-[68vw] lg:w-[60%]">
+      <div className="bg-white shadow-2xl p-[32px] border rounded-[10px] w-[85vw] lg:w-[60%]">
         <p className="font-bold text-[20px]">Register your account</p>
         <Link
           to="/sign-up"
