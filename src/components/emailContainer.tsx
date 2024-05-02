@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CTAButton from "../buttons/cta";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import ResendMail from "./resendMail";
 
 interface EmailContainerProps {
   heading: string;
@@ -21,15 +22,20 @@ const EmailContainer: React.FC<EmailContainerProps> = ({
 }) => {
   const [loading, setloading] = useState(false);
   const nav = useNavigate();
-
+  const location = useLocation();
+  const { email } = location.state;
+  const { token } = location.state;
+  console.log(email);
   const onClick = () => {
     setloading(true);
-    nav(navigate);
+    nav(navigate, {
+      state: { email: email, token: token },
+    });
   };
 
   return (
     <div className="flex flex-col justify-center w-[97vw] lg:w-[50vw] items-center h-[100vh] bg-custom-gray">
-      <div className="bg-white shadow-2xl px-[32px] py-[64px] border rounded-[10px] w-[80vw] flex flex-col justify-center items-center lg:w-[70%]">
+      <div className="bg-white shadow-2xl px-[32px] py-[64px] border rounded-[10px] w-[90vw] flex flex-col justify-center items-center lg:w-[70%]">
         <img src={image} alt="mail" className="mb-[16px]" />
         <p className="font-bold text-[25px] text-center">{heading}</p>
         <p className="text-[14px] mt-[4px] text-center w-[85%] font-semibold text-custom-darkGray">
@@ -40,18 +46,13 @@ const EmailContainer: React.FC<EmailContainerProps> = ({
             loading={loading}
             text={cta}
             textColor="white"
-            bgColor="primary"
-            width="[50%]"
+            bgColor="#ff8600"
+            width="50%"
             onClick={onClick}
           />
         </div>
 
-        {confirmEmail && (
-          <p className="mt-[32px] text-center font-bold text-[12px] text-custom-darkGray">
-            Didnt get the mail?{" "}
-            <span className="text-custom-primary">Resend</span>{" "}
-          </p>
-        )}
+        {confirmEmail && <ResendMail email={email} token={token} />}
       </div>
     </div>
   );

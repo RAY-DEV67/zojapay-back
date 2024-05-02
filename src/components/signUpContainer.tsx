@@ -17,28 +17,33 @@ function SignUpContainer() {
 
   const registerUser = () => {
     setloading(true);
-    try {
-      axios
-        .post("https://fe-test.revvex.io/api/admin/register", {
-          first_name: firstName,
-          last_name: lastName,
-          email: email,
-          password: userPassword,
-        })
-        .then((result) => {
-          console.log(result.data);
-          navigate("/confirm-email");
-          setloading(false);
-        })
-        .catch((err) => {
-          console.log(err.response.data);
-          setloading(false);
-        });
-    } catch (error) {
-      setloading(false);
-      console.error("Error registering user", error);
-      // Handle error, e.g., display error message
-    }
+    navigate("/confirm-email", {
+      state: { email: email, token: "token" },
+    });
+    // try {
+    //   axios
+    //     .post("https://fe-test.revvex.io/api/admin/register", {
+    //       first_name: firstName,
+    //       last_name: lastName,
+    //       email: email,
+    //       password: userPassword,
+    //     })
+    //     .then((result) => {
+    //       console.log(result.data.data.token);
+    //       navigate("/confirm-email", {
+    //         state: { email: email, token: result.data.data.token },
+    //       });
+    //       setloading(false);
+    //     })
+    //     .catch((err) => {
+    //       console.log(err.response.data);
+    //       setloading(false);
+    //     });
+    // } catch (error) {
+    //   setloading(false);
+    //   console.error("Error registering user", error);
+    //   // Handle error, e.g., display error message
+    // }
   };
 
   return (
