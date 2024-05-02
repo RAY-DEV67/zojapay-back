@@ -31,9 +31,9 @@ function OTPVerification() {
   return (
     <div className="flex flex-col items-center lg:flex-row-reverse">
       <div className="flex flex-col justify-center w-[97vw] lg:w-[50vw] items-center h-[100vh] bg-custom-gray">
-        <div className="bg-white shadow-2xl p-[16px] lg:p-[64px] border rounded-[10px] w-[90vw] lg:w-[60%]">
+        <div className="bg-white shadow-2xl p-[24px] lg:p-[32px] border rounded-[10px] w-[90vw] lg:w-[60%]">
           <p className="font-bold text-[25px]">Verify your Email</p>
-          <p className="text-[14px] mt-[4px] font-semibold text-custom-darkGray">
+          <p className="text-[14px] mt-[4px] w-[70%] lg:w-[100%] font-semibold text-custom-darkGray">
             A four digit OTP code has been sent to your email{" "}
             <span className="text-custom-primary">Seyi@zojatech.com</span>
           </p>
