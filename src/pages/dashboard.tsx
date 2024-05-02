@@ -30,9 +30,9 @@ function Dashboard() {
   return (
     <div className="bg-[#f6f6f6] flex flex-col items-center lg:ml-[14.5vw] lg:items-start ">
       <DashboardHeading heading="My Portfolio" />
-      <div className="w-[90vw] lg:w-[85vw] p-[16px] pt-[80px] lg:pt-[60px] flex flex-col items-center lg:items-start lg:flex-row">
+      <div className="w-[90vw] lg:w-[85vw] p-[16px] pt-[50px] lg:pt-[60px] flex flex-col items-center lg:items-start lg:flex-row">
         <div className="lg:w-[60vw]">
-          <div className="flex gap-y-5 flex-col lg:fixed items-center justify-between h-[180px] lg:h-[100px] lg:flex-row lg:w-[60vw] w-[85vw] bg-[#f6f6f6] py-[16px]">
+          <div className="flex gap-y-5 flex-col lg:fixed items-center justify-between lg:h-[100px] lg:flex-row lg:w-[60vw] w-[85vw] bg-[#f6f6f6] py-[16px]">
             <DashboardCard
               number={51}
               text="Total Channels"
