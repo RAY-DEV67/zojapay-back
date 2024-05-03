@@ -1,4 +1,3 @@
-// import axios from "axios";
 import Input from "./input";
 import name from "../assets/name.png";
 import mail from "../assets/mail.png";
@@ -6,6 +5,7 @@ import password from "../assets/password.png";
 import CTAButton from "../buttons/cta";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { SignUp } from "../helper/signUp";
 
 function SignUpContainer() {
   const [firstName, setfirstName] = useState("");
@@ -15,35 +15,15 @@ function SignUpContainer() {
   const [loading, setloading] = useState(false);
   const navigate = useNavigate();
 
-  const registerUser = () => {
-    setloading(true);
-    navigate("/confirm-email", {
-      state: { email: email, token: "token" },
+  const handleSignUp = () => {
+    SignUp({
+      firstName,
+      lastName,
+      email,
+      userPassword,
+      navigate,
+      setloading: setloading,
     });
-    // try {
-    //   axios
-    //     .post("https://fe-test.revvex.io/api/admin/register", {
-    //       first_name: firstName,
-    //       last_name: lastName,
-    //       email: email,
-    //       password: userPassword,
-    //     })
-    //     .then((result) => {
-    //       console.log(result.data.data.token);
-    //       navigate("/confirm-email", {
-    //         state: { email: email, token: result.data.data.token },
-    //       });
-    //       setloading(false);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err.response.data);
-    //       setloading(false);
-    //     });
-    // } catch (error) {
-    //   setloading(false);
-    //   console.error("Error registering user", error);
-    //   // Handle error, e.g., display error message
-    // }
   };
 
   return (
@@ -95,10 +75,18 @@ function SignUpContainer() {
 
         <CTAButton
           text="Create account"
-          textColor="#c3c7ce"
-          bgColor="#eceded"
+          textColor={
+            firstName && lastName && email && userPassword
+              ? "#ffffff"
+              : "#c3c7ce"
+          }
+          bgColor={
+            firstName && lastName && email && userPassword
+              ? "#ff8600"
+              : "#eceded"
+          }
           width="98%"
-          onClick={registerUser}
+          onClick={handleSignUp}
           loading={loading}
         />
 

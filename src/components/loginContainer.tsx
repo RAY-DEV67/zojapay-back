@@ -4,7 +4,7 @@ import password from "../assets/password.png";
 import CTAButton from "../buttons/cta";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
+import { loginUser } from "../helper/login";
 
 function LoginContainer() {
   const [email, setemail] = useState("");
@@ -12,28 +12,8 @@ function LoginContainer() {
   const [loading, setloading] = useState(false);
   const navigate = useNavigate();
 
-  const loginUser = () => {
-    setloading(true);
-    try {
-      axios
-        .post("https://fe-test.revvex.io/api/admin/login", {
-          email: email,
-          password: userPassword,
-        })
-        .then((result) => {
-          console.log(result.data);
-          navigate("/dashboard");
-          setloading(false);
-        })
-        .catch((err) => {
-          setloading(false);
-          console.log(err.response.data);
-        });
-    } catch (error) {
-      setloading(false);
-      console.error("Error registering user", error);
-      // Handle error, e.g., display error message
-    }
+  const handleLogin = () => {
+    loginUser({ email, userPassword, navigate, setloading: setloading });
   };
 
   return (
@@ -65,11 +45,11 @@ function LoginContainer() {
 
         <CTAButton
           text="Login"
-          textColor="#c3c7ce"
-          bgColor="#eceded"
+          textColor={email && userPassword ? "#ffffff" : "#c3c7ce"}
+          bgColor={email && userPassword ? "#ff8600" : "#eceded"}
           width="98%"
           loading={loading}
-          onClick={loginUser}
+          onClick={handleLogin}
         />
 
         <p className="mt-[24px] font-semibold text-[12px] text-custom-darkGray">

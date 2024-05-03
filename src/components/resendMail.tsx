@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API } from "../const/api";
 
 interface ResendMailProps {
   token: string;
@@ -9,7 +10,7 @@ const ResendMail: React.FC<ResendMailProps> = ({ token, email }) => {
   const resendMail = async () => {
     try {
       const response = await axios.post(
-        "https://fe-test.revvex.io/api/admin/resend-otp",
+        `${API}resend-otp`,
         { email: email },
         {
           headers: {
