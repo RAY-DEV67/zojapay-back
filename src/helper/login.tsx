@@ -1,6 +1,7 @@
 import { API } from "../const/api";
 import axios from "axios";
 import { NavigateFunction } from "react-router-dom";
+import { toast } from "react-toastify";
 
 interface LoginUserProps {
   email: string;
@@ -23,13 +24,13 @@ export const loginUser = ({
         password: userPassword,
       })
       .then((result) => {
-        console.log(result.data);
+        toast.success(result.data.message);
         navigate("/dashboard");
         setloading(false);
       })
       .catch((err) => {
         setloading(false);
-        console.log(err.response.data);
+        toast.error(err.response.data.message);
       });
   }
 };

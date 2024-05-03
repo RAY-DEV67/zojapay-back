@@ -1,6 +1,7 @@
 import axios from "axios";
 import { NavigateFunction } from "react-router-dom";
 import { API } from "../const/api";
+import { toast } from "react-toastify";
 
 interface SignUpProps {
   email: string;
@@ -21,29 +22,23 @@ export const SignUp = ({
 }: SignUpProps) => {
   if (email && userPassword && firstName && lastName) {
     setloading(true);
-    try {
-      axios
-        .post(`${API}register`, {
-          first_name: firstName,
-          last_name: lastName,
-          email: email,
-          password: userPassword,
-        })
-        .then((result) => {
-          console.log(result.data.data.token);
-          navigate("/confirm-email", {
-            state: { email: email, token: result.data.data.token },
-          });
-          setloading(false);
-        })
-        .catch((err) => {
-          console.log(err.response.data);
-          setloading(false);
+    axios
+      .post(`${API}register`, {
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        password: userPassword,
+      })
+      .then((result) => {
+        toast.success(result.data.message);
+        navigate("/confirm-email", {
+          state: { email: email, token: result.data.data.token },
         });
-    } catch (error) {
-      setloading(false);
-      console.error("Error registering user", error);
-      // Handle error, e.g., display error message
-    }
+        setloading(false);
+      })
+      .catch((err) => {
+        setloading(false);
+        toast.error(err.response.data.message);
+      });
   }
 };

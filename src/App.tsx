@@ -10,6 +10,8 @@ import Dashboard from "./pages/dashboard";
 import Navbar from "./components/navbar";
 import Login from "./pages/login";
 import Messages from "./pages/messages";
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App: React.FC = () => {
   return (
@@ -57,6 +59,7 @@ const App: React.FC = () => {
             <Route path="/messages" element={<Messages />} />
           </Routes>
         </ScrollToTop>
+        <ToastContainer />
         <FeaturesTab />
       </Router>
     </div>
