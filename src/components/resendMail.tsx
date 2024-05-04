@@ -27,7 +27,10 @@ const ResendMail: React.FC<ResendMailProps> = ({ token, email }) => {
   return (
     <p className="mt-[32px] text-center font-bold text-[12px] text-custom-darkGray">
       Didnt get the mail?{" "}
-      <span className="text-custom-primary cursor-pointer" onClick={resendMail}>
+      <span
+        className="text-custom-primary hover:text-blue-500 cursor-pointer"
+        onClick={resendMail}
+      >
         Resend
       </span>{" "}
     </p>

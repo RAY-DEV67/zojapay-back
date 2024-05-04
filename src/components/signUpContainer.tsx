@@ -3,9 +3,10 @@ import name from "../assets/name.png";
 import mail from "../assets/mail.png";
 import password from "../assets/password.png";
 import CTAButton from "../buttons/cta";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { SignUp } from "../helper/signUp";
+import AlreadyHaveAnAccount from "./alreadyHaveAnAccount";
 
 function SignUpContainer() {
   const [firstName, setfirstName] = useState("");
@@ -96,12 +97,11 @@ function SignUpContainer() {
           <span className="text-custom-primary">Privacy Policy</span>
         </p>
 
-        <p className="mt-[32px] font-bold text-[12px] text-custom-darkGray">
-          Already have an account?{" "}
-          <Link to="/login" className="text-custom-primary">
-            Login
-          </Link>
-        </p>
+        <AlreadyHaveAnAccount
+          navigate="/login"
+          text="Already have an account?"
+          action="Login"
+        />
       </div>
     </div>
   );

@@ -37,16 +37,19 @@ function Dashboard() {
               number={51}
               text="Total Channels"
               icon={dashboardCard1}
+              hover="green-100"
             />
             <DashboardCard
               number={125}
               text="New Members"
               icon={dashboardCard2}
+              hover="blue-100"
             />
             <DashboardCard
               number={789}
               text="All Impressions"
               icon={dashboardCard3}
+              hover="red-100"
             />
           </div>
 

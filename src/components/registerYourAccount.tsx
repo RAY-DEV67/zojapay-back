@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import AlreadyHaveAnAccount from "./alreadyHaveAnAccount";
 
 function RegisterYourAccount() {
   return (
@@ -7,7 +8,7 @@ function RegisterYourAccount() {
         <p className="font-bold text-[20px]">Register your account</p>
         <Link
           to="/sign-up"
-          className="flex flex-row border mt-[16px] w-[100%] justify-center items-center py-[8px] rounded-[5px]"
+          className="flex flex-row border cursor-pointer hover:bg-[#f6f6f6] mt-[16px] w-[100%] justify-center items-center py-[8px] rounded-[5px]"
         >
           <svg
             width="15px"
@@ -56,7 +57,7 @@ function RegisterYourAccount() {
           <div className="w-[23vw] lg:w-[11vw] h-[1px] bg-custom-lightGray"></div>
         </div>
 
-        <div className="flex flex-row border mt-[8px] w-[100%] justify-center items-center py-[8px] rounded-[5px]">
+        <div className="flex hover:bg-[#f6f6f6] cursor-pointer flex-row border mt-[8px] w-[100%] justify-center items-center py-[8px] rounded-[5px]">
           <svg
             width="15px"
             viewBox="-0.5 0 48 48"
@@ -130,12 +131,11 @@ function RegisterYourAccount() {
           <span className="text-custom-primary">Privacy Policy</span>
         </p>
 
-        <p className="mt-[64px] font-bold text-[12px] text-custom-darkGray">
-          Already have an account?{" "}
-          <Link to="/login" className="text-custom-primary">
-            Login
-          </Link>{" "}
-        </p>
+        <AlreadyHaveAnAccount
+          navigate="/login"
+          text="Already have an account?"
+          action="Login"
+        />
       </div>
     </div>
   );

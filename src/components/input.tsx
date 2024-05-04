@@ -29,7 +29,7 @@ const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         type={type}
         style={{ width: width }}
-        className={`border text-[15px] pl-[50px] font-semibold border-custom-inactiveGray flex mt-[16px] rounded-[5px] py-[12px] px-[8px] ${
+        className={`border text-[15px] cursor-pointer hover:bg-[#f6f6f6] pl-[50px] font-semibold border-custom-inactiveGray flex mt-[16px] rounded-[5px] py-[12px] px-[8px] ${
           value.trim() === ""
             ? "border-custom-inactiveGray"
             : "border-custom-primary border-2 bg-white"

@@ -2,9 +2,10 @@ import Input from "./input";
 import mail from "../assets/mail.png";
 import password from "../assets/password.png";
 import CTAButton from "../buttons/cta";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { loginUser } from "../helper/login";
+import AlreadyHaveAnAccount from "./alreadyHaveAnAccount";
 
 function LoginContainer() {
   const [email, setemail] = useState("");
@@ -58,12 +59,11 @@ function LoginContainer() {
           <span className="text-custom-primary">Privacy Policy</span>
         </p>
 
-        <p className="mt-[32px] font-bold text-[12px] text-custom-darkGray">
-          Dont have an account?{" "}
-          <Link to="/sign-up" className="text-custom-primary">
-            Register
-          </Link>{" "}
-        </p>
+        <AlreadyHaveAnAccount
+          text="Dont have an account?"
+          action="Register"
+          navigate="/sign-up"
+        />
       </div>
     </div>
   );
