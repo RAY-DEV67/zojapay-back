@@ -24,13 +24,13 @@ function Navbar() {
             : "hidden"
         } lg:fixed bg-white flex-col items-center justify-between lg:px-[10px] lg:py-[30px] h-[100vh] lg:w-[14.5vw]`}
       >
-        <div className="flex flex-col items-center">
-          <img src={logo} alt="logo" className="mb-[24px]" />
+        <div className="flex flex-col items-cente mx-[16px]">
+          <img src={logo} alt="logo" className="mb-[24px] w-[100px]" />
           <Link
             to="/dashboard"
             className={`flex flex-row items-center py-[8px] ${
               location.pathname === "/dashboard"
-                ? "bg-white shadow-lg px-[32px] rounded-[10px] mb-[8px] text-custom-primary"
+                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
             }`}
           >
@@ -46,7 +46,7 @@ function Navbar() {
           <div
             className={`flex flex-row items-center py-[8px] ${
               location.pathname === "/My-Group"
-                ? "bg-white shadow-lg px-[32px] rounded-[10px] mb-[8px] text-custom-primary"
+                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
             }`}
           >
@@ -57,7 +57,7 @@ function Navbar() {
             to="/messages"
             className={`flex flex-row items-center py-[8px] ${
               location.pathname === "/messages"
-                ? "bg-white shadow-lg px-[32px] rounded-[10px] mb-[8px] text-custom-primary"
+                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
             }`}
           >
@@ -70,7 +70,7 @@ function Navbar() {
           <div
             className={`flex flex-row items-center py-[8px] ${
               location.pathname === "/Analytics"
-                ? "bg-white shadow-lg px-[32px] rounded-[10px] mb-[8px] text-custom-primary"
+                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
             }`}
           >
@@ -80,7 +80,7 @@ function Navbar() {
           <div
             className={`flex flex-row items-center py-[8px] ${
               location.pathname === "/Pack"
-                ? "bg-white shadow-lg px-[32px] rounded-[10px] mb-[8px] text-custom-primary"
+                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
             }`}
           >
@@ -90,7 +90,7 @@ function Navbar() {
           <div
             className={`flex flex-row items-center py-[8px] ${
               location.pathname === "/Settings"
-                ? "bg-white shadow-lg px-[32px] rounded-[10px] mb-[16px] text-custom-primary"
+                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[16px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
             }`}
           >
