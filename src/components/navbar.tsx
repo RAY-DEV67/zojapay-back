@@ -10,9 +10,12 @@ import settings from "../assets/settings.png";
 import group from "../assets/users.png";
 import avatar from "../assets/avatar (2).png";
 import logout from "../assets/logout (2).png";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 function Navbar() {
   const location = useLocation();
+  const userDetails = useSelector((state: RootState) => state.user.userDetails);
 
   return (
     <>
@@ -101,7 +104,9 @@ function Navbar() {
 
         <div className="flex flex-col items-center rounded-[20px] relative bg-white shadow-lg w-[90%] py-[24px]">
           <img src={avatar} alt="avatar" className="absolute top-[-20px]" />
-          <p className="text-[16px] font-bold mt-[24px]">Theresa Milly</p>
+          <p className="text-[16px] font-bold mt-[24px]">
+            {userDetails?.first_name} {userDetails?.last_name}
+          </p>
           <p className="text-[14px]">Influencer</p>
           <div className="flex flex-row items-center mt-[16px] py-[4px] px-[16px] justify-center bg-opacity-[16%] rounded-[5px] bg-custom-primary">
             <img src={logout} alt="logout" />

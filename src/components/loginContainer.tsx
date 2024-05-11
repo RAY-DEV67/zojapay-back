@@ -6,15 +6,28 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { loginUser } from "../helper/login";
 import AlreadyHaveAnAccount from "./alreadyHaveAnAccount";
+import { useDispatch } from "react-redux";
 
 function LoginContainer() {
   const [email, setemail] = useState("");
   const [userPassword, setuserPassword] = useState("");
   const [loading, setloading] = useState(false);
+  const [showPassword, setshowPassword] = useState(false);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    loginUser({ email, userPassword, navigate, setloading: setloading });
+    loginUser({
+      email,
+      userPassword,
+      navigate,
+      setloading: setloading,
+      dispatch,
+    });
+  };
+
+  const updateShowPassword = () => {
+    setshowPassword(!showPassword);
   };
 
   return (
@@ -33,6 +46,7 @@ function LoginContainer() {
           placeholder="Email"
           type="text"
           width="98%"
+          onClick={updateShowPassword}
         />
         <Input
           value={userPassword}
@@ -40,8 +54,9 @@ function LoginContainer() {
           icon={password}
           iconPosition="25px"
           placeholder="Password"
-          type="text"
+          type={showPassword ? "text" : "password"}
           width="98%"
+          onClick={updateShowPassword}
         />
 
         <CTAButton
