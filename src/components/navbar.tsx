@@ -1,5 +1,5 @@
 import logo from "../assets/buddyLogo.png";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import analytics from "../assets/analytics.png";
 import messages from "../assets/messages.png";
 import messagesLight from "../assets/messagesLight.png";
@@ -10,12 +10,21 @@ import settings from "../assets/settings.png";
 import group from "../assets/users.png";
 import avatar from "../assets/avatar (2).png";
 import logout from "../assets/logout (2).png";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import { setUserDetails } from "../redux/userDetailsReducer";
 
-function Navbar() {
+export const Navbar = () => {
   const location = useLocation();
   const userDetails = useSelector((state: RootState) => state.user.userDetails);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const logOut = () => {
+    dispatch(setUserDetails(null));
+    sessionStorage.removeItem("token");
+    navigate("/");
+  };
 
   return (
     <>
@@ -47,7 +56,7 @@ function Navbar() {
             <p className="ml-[4px] text-[14px] font-semibold">My Portfolio</p>
           </Link>
           <div
-            className={`flex flex-row items-center py-[8px] ${
+            className={`flex flex-row cursor-pointer items-center py-[8px] ${
               location.pathname === "/My-Group"
                 ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
@@ -71,7 +80,7 @@ function Navbar() {
             <p className="ml-[4px] text-[14px] font-semibold">Messages</p>
           </Link>
           <div
-            className={`flex flex-row items-center py-[8px] ${
+            className={`flex flex-row cursor-pointer items-center py-[8px] ${
               location.pathname === "/Analytics"
                 ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
@@ -81,7 +90,7 @@ function Navbar() {
             <p className="ml-[4px] text-[14px] font-semibold">Analytics</p>
           </div>
           <div
-            className={`flex flex-row items-center py-[8px] ${
+            className={`flex flex-row cursor-pointer items-center py-[8px] ${
               location.pathname === "/Pack"
                 ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
@@ -91,7 +100,7 @@ function Navbar() {
             <p className="ml-[4px] text-[14px] font-semibold">Pack</p>
           </div>
           <div
-            className={`flex flex-row items-center py-[8px] ${
+            className={`flex flex-row cursor-pointer items-center py-[8px] ${
               location.pathname === "/Settings"
                 ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[16px] text-custom-primary"
                 : "text-custom-darkGray mb-[8px]"
@@ -108,7 +117,10 @@ function Navbar() {
             {userDetails?.first_name} {userDetails?.last_name}
           </p>
           <p className="text-[14px]">Influencer</p>
-          <div className="flex flex-row items-center mt-[16px] py-[4px] px-[16px] justify-center bg-opacity-[16%] rounded-[5px] bg-custom-primary">
+          <div
+            onClick={logOut}
+            className="flex flex-row cursor-pointer items-center mt-[16px] py-[4px] px-[16px] justify-center bg-opacity-[16%] rounded-[5px] bg-custom-primary"
+          >
             <img src={logout} alt="logout" />
             <p className="ml-[4px] text-custom-primary text-[14px]">LogOut</p>
           </div>
@@ -171,6 +183,6 @@ function Navbar() {
       </div>
     </>
   );
-}
+};
 
 export default Navbar;
