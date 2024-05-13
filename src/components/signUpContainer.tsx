@@ -3,7 +3,7 @@ import name from "../assets/name.png";
 import mail from "../assets/mail.png";
 import password from "../assets/password.png";
 import CTAButton from "../buttons/cta";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { SignUp } from "../helper/signUp";
 import AlreadyHaveAnAccount from "./alreadyHaveAnAccount";
@@ -27,6 +27,10 @@ function SignUpContainer() {
     });
   };
 
+  const signUp = () => {
+    console.log("Sign Up");
+  };
+
   return (
     <div className="flex flex-col w-[97vw] lg:w-[50vw] justify-center items-center h-[100vh] bg-custom-gray">
       <div className="bg-white shadow-2xl p-[24px] lg:p-[40px] border rounded-[10px] w-[90vw] lg:w-[70%]">
@@ -43,6 +47,7 @@ function SignUpContainer() {
             icon={name}
             width="95%"
             iconPosition="40px"
+            onClick={signUp}
           />
           <Input
             value={lastName}
@@ -52,6 +57,7 @@ function SignUpContainer() {
             type="text"
             width="95%"
             iconPosition="40px"
+            onClick={signUp}
           />
         </div>
 
@@ -63,6 +69,7 @@ function SignUpContainer() {
           placeholder="Work email"
           type="text"
           width="98%"
+          onClick={signUp}
         />
         <Input
           value={userPassword}
@@ -72,6 +79,7 @@ function SignUpContainer() {
           placeholder="Password"
           type="text"
           width="98%"
+          onClick={signUp}
         />
 
         <CTAButton
