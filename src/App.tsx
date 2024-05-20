@@ -12,6 +12,7 @@ import Login from "./pages/login";
 import Messages from "./pages/messages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import RequireAuth from "./components/requireAuth";
 
 const App: React.FC = () => {
   return (
@@ -55,8 +56,10 @@ const App: React.FC = () => {
             <Route path="/confirm-email" element={<ConfirmEmail />} />
             <Route path="/email-verified" element={<EmailVerified />} />
             <Route path="/verify-otp" element={<OTPVerification />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/messages" element={<Messages />} />
+            <Route element={<RequireAuth />}>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/messages" element={<Messages />} />
+            </Route>
           </Routes>
         </ScrollToTop>
         <ToastContainer />
