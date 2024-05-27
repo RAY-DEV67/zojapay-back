@@ -10,7 +10,7 @@ function EmailVerified() {
         heading="Email Verified"
         text="The verified email address will be associated with your account.
         Click on the button below to continue."
-        navigate="/dashboard"
+        navigate="/login"
         confirmEmail={false}
       />
     </div>
