@@ -1,5 +1,5 @@
-import EmailContainer from "../components/emailContainer";
-import mail from "../assets/confirmEmail.png";
+import EmailContainer from "../../components/emailContainer";
+import mail from "../../assets/confirmEmail.png";
 
 function ConfirmEmail() {
   return (

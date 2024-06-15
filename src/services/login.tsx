@@ -3,7 +3,7 @@ import axios from "axios";
 import { NavigateFunction } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AppDispatch } from "../redux/store"; // Import AppDispatch type
-import { setUserDetails } from "../redux/userDetailsReducer";
+import { setUserDetails } from "../redux/slice/userDetailsReducer";
 
 interface LoginUserProps {
   email: string;
@@ -34,7 +34,7 @@ export const loginUser = ({
 
         // Save token in session storage
         const token = result.data.data.token;
-        sessionStorage.setItem('token', token);
+        sessionStorage.setItem("token", token);
 
         navigate("/dashboard");
         setloading(false);

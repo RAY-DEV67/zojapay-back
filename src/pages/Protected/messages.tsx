@@ -1,6 +1,6 @@
-import DashboardHeading from "../components/dashboardHeading";
-import MessagesSideNav from "../components/messagesSideNav";
-import Messenger from "../components/messenger";
+import DashboardHeading from "../../components/dashboardHeading";
+import MessagesSideNav from "../../components/messagesSideNav";
+import Messenger from "../../components/messenger";
 
 function Messages() {
   return (

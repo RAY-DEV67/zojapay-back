@@ -1,7 +1,7 @@
 import { useState } from "react";
-import CTAButton from "../buttons/cta";
+import CTAButton from "../../components/button";
 import { useLocation, useNavigate } from "react-router-dom";
-import ResendMail from "../components/resendMail";
+import ResendMail from "../../components/resendMail";
 
 function OTPVerification() {
   const [code, setCode] = useState<string[]>(["", "", "", ""]);

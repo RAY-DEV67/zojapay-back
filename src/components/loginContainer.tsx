@@ -1,10 +1,10 @@
 import Input from "./input";
 import mail from "../assets/mail.png";
 import password from "../assets/password.png";
-import CTAButton from "../buttons/cta";
+import CTAButton from "./button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { loginUser } from "../helper/login";
+import { loginUser } from "../services/login";
 import AlreadyHaveAnAccount from "./alreadyHaveAnAccount";
 import { useDispatch } from "react-redux";
 

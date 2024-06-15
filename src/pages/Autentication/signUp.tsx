@@ -1,4 +1,4 @@
-import SignUpContainer from "../components/signUpContainer";
+import SignUpContainer from "../../components/signUpContainer";
 
 function SignUp() {
   return (

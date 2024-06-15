@@ -1,4 +1,4 @@
-import LoginContainer from "../components/loginContainer";
+import LoginContainer from "../../components/loginContainer";
 
 function Login() {
   return (

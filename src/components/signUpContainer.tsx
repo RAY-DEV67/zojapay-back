@@ -2,10 +2,10 @@ import Input from "./input";
 import name from "../assets/name.png";
 import mail from "../assets/mail.png";
 import password from "../assets/password.png";
-import CTAButton from "../buttons/cta";
+import CTAButton from "./button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { SignUp } from "../helper/signUp";
+import { SignUp } from "../services/signUp";
 import AlreadyHaveAnAccount from "./alreadyHaveAnAccount";
 
 function SignUpContainer() {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CTAButton from "../buttons/cta";
+import CTAButton from "./button";
 import { useLocation, useNavigate } from "react-router-dom";
 import ResendMail from "./resendMail";
 

@@ -12,7 +12,7 @@ import avatar from "../assets/avatar (2).png";
 import logout from "../assets/logout (2).png";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { setUserDetails } from "../redux/userDetailsReducer";
+import { setUserDetails } from "../redux/slice/userDetailsReducer";
 
 export const Navbar = () => {
   const location = useLocation();
