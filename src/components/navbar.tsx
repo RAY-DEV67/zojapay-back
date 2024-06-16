@@ -40,10 +40,9 @@ export const Navbar = () => {
           <img src={logo} alt="logo" className="mb-[24px] w-[100px]" />
           <Link
             to="/dashboard"
-            className={`flex flex-row items-center py-[8px] ${
-              location.pathname === "/dashboard"
-                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
-                : "text-custom-darkGray mb-[8px]"
+            className={`flex flex-row items-center px-[24px] py-[8px] text-custom-darkGray mb-[8px] ${
+              location.pathname === "/dashboard" &&
+              "bg-white shadow-lg rounded-[10px] text-custom-primary"
             }`}
           >
             <img
@@ -53,13 +52,12 @@ export const Navbar = () => {
               alt="portfolio"
               className="h-[15px] w-[15px]"
             />
-            <p className="ml-[4px] text-[14px] font-semibold">My Portfolio</p>
+            <p className="ml-[4px] text-[14px] font-semibold ">My Portfolio</p>
           </Link>
           <div
-            className={`flex flex-row cursor-pointer items-center py-[8px] ${
-              location.pathname === "/My-Group"
-                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
-                : "text-custom-darkGray mb-[8px]"
+            className={`flex flex-row cursor-pointer text-custom-darkGray mb-[8px] px-[24px] items-center py-[8px] ${
+              location.pathname === "/My-Group" &&
+              "bg-white shadow-lg rounded-[10px] text-custom-primary"
             }`}
           >
             <img src={group} alt="portfolio" />
@@ -67,10 +65,9 @@ export const Navbar = () => {
           </div>
           <Link
             to="/messages"
-            className={`flex flex-row items-center py-[8px] ${
-              location.pathname === "/messages"
-                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
-                : "text-custom-darkGray mb-[8px]"
+            className={`flex flex-row items-center py-[8px] px-[24px] text-custom-darkGray mb-[8px] ${
+              location.pathname === "/messages" &&
+              "bg-white shadow-lg rounded-[10px] text-custom-primary"
             }`}
           >
             <img
@@ -80,30 +77,27 @@ export const Navbar = () => {
             <p className="ml-[4px] text-[14px] font-semibold">Messages</p>
           </Link>
           <div
-            className={`flex flex-row cursor-pointer items-center py-[8px] ${
-              location.pathname === "/Analytics"
-                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
-                : "text-custom-darkGray mb-[8px]"
+            className={`flex flex-row cursor-pointer items-center text-custom-darkGray mb-[8px] px-[24px] py-[8px] ${
+              location.pathname === "/Analytics" &&
+              "bg-white shadow-lg rounded-[10px] text-custom-primary"
             }`}
           >
             <img src={analytics} alt="portfolio" />
             <p className="ml-[4px] text-[14px] font-semibold">Analytics</p>
           </div>
           <div
-            className={`flex flex-row cursor-pointer items-center py-[8px] ${
-              location.pathname === "/Pack"
-                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[8px] text-custom-primary"
-                : "text-custom-darkGray mb-[8px]"
+            className={`flex flex-row cursor-pointer items-center text-custom-darkGray mb-[8px] px-[24px] py-[8px] ${
+              location.pathname === "/Pack" &&
+              "bg-white shadow-lg rounded-[10px] text-custom-primary"
             }`}
           >
             <img src={pack} alt="portfolio" />
             <p className="ml-[4px] text-[14px] font-semibold">Pack</p>
           </div>
           <div
-            className={`flex flex-row cursor-pointer items-center py-[8px] ${
-              location.pathname === "/Settings"
-                ? "bg-white shadow-lg px-[24px] rounded-[10px] mb-[16px] text-custom-primary"
-                : "text-custom-darkGray mb-[8px]"
+            className={`flex flex-row cursor-pointer items-center text-custom-darkGray mb-[8px] px-[24px] py-[8px] ${
+              location.pathname === "/Settings" &&
+              "bg-white shadow-lg rounded-[10px] text-custom-primary"
             }`}
           >
             <img src={settings} alt="portfolio" />

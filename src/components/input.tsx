@@ -1,6 +1,3 @@
-import HidePassword from "../buttons/hidePassword";
-import ShowPassword from "../buttons/showPassword";
-
 interface InputProps {
   placeholder: string;
   type: string;
@@ -9,7 +6,6 @@ interface InputProps {
   iconPosition: string;
   value: string;
   setvalue: React.Dispatch<React.SetStateAction<string>>;
-  onClick: () => void;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -20,7 +16,6 @@ const Input: React.FC<InputProps> = ({
   iconPosition,
   value,
   setvalue,
-  onClick,
 }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setvalue(event.target.value);
@@ -40,14 +35,7 @@ const Input: React.FC<InputProps> = ({
             : "border-custom-primary border-2 bg-white"
         }`}
       />
-      {placeholder === "Password" && (
-        <div
-          onClick={onClick}
-          className="absolute cursor-pointer top-4 right-5 z-10"
-        >
-          {type === "password" ? <ShowPassword /> : <HidePassword />}
-        </div>
-      )}
+
       <img
         src={icon}
         style={{ top: iconPosition }}

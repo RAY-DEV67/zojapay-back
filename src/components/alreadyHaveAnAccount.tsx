@@ -13,13 +13,13 @@ const AlreadyHaveAnAccount: React.FC<AlreadyHaveAnAccountProps> = ({
 }) => {
   return (
     <p className="mt-[32px] font-bold text-[12px] text-custom-darkGray">
-      {text}{" "}
+      {text}
       <Link
         to={navigate}
         className="text-custom-primary cursor-pointer hover:text-blue-500"
       >
         {action}
-      </Link>{" "}
+      </Link>
     </p>
   );
 };
