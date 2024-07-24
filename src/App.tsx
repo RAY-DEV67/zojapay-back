@@ -1,18 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ScrollToTop } from "./components/scrollToTop";
-import LandingPage from "./pages/home";
-import FeaturesTab from "./components/featuresTab";
-import ConfirmEmail from "./pages/Autentication/confirmEmail";
-import EmailVerified from "./pages/Autentication/emailVerified";
-import OTPVerification from "./pages/Autentication/otpVerification";
 import Dashboard from "./pages/Protected/dashboard";
 import Navbar from "./components/navbar";
 import Login from "./pages/Autentication/login";
-import Messages from "./pages/Protected/messages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RequireAuth from "./components/requireAuth";
-import SignUpContainer from "./pages/Autentication/signUp";
 
 const App: React.FC = () => {
   return (
@@ -50,20 +43,14 @@ const App: React.FC = () => {
         <Navbar />
         <ScrollToTop>
           <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/sign-up" element={<SignUpContainer />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/confirm-email" element={<ConfirmEmail />} />
-            <Route path="/email-verified" element={<EmailVerified />} />
-            <Route path="/verify-otp" element={<OTPVerification />} />
+            <Route path="/" element={<Login />} />
+
             <Route element={<RequireAuth />}>
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/messages" element={<Messages />} />
             </Route>
           </Routes>
         </ScrollToTop>
         <ToastContainer />
-        <FeaturesTab />
       </Router>
     </div>
   );

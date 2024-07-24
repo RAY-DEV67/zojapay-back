@@ -8,18 +8,15 @@ interface CTAButtonProps {
 }
 
 const CTAButton: React.FC<CTAButtonProps> = ({
-  bgColor,
   text,
   textColor,
-  width,
   onClick,
   loading,
 }) => {
   return (
     <div
       onClick={onClick}
-      style={{ width: width, backgroundColor: bgColor }}
-      className="flex flex-row cursor-pointer mt-[24px] justify-center items-center py-[12px] rounded-[5px]"
+      className="flex flex-row cursor-pointer w-[100px] bg-custom-primary mt-[24px] justify-center items-center py-[12px] rounded-[5px]"
     >
       <style>
         {`

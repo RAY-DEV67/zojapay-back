@@ -1,4 +1,4 @@
-import logo from "../assets/buddyLogo.png";
+import logo from "../assets/zojapayLogo.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import analytics from "../assets/analytics.png";
 import messages from "../assets/messages.png";
@@ -13,6 +13,7 @@ import logout from "../assets/logout (2).png";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { setUserDetails } from "../redux/slice/userDetailsReducer";
+import NavButton from "./navbutton";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -28,152 +29,22 @@ export const Navbar = () => {
 
   return (
     <>
-      <div
-        className={`${
-          location.pathname === "/dashboard" ||
-          location.pathname === "/messages"
-            ? "lg:flex hidden"
-            : "hidden"
-        } lg:fixed bg-white flex-col items-center justify-between lg:px-[10px] lg:py-[30px] h-[100vh] lg:w-[14.5vw]`}
-      >
-        <div className="flex flex-col items-cente mx-[16px]">
+      <div className="lg:fixed bg-white flex-col shadow-md items-center justify-between lg:px-[1px] lg:py-[30px] h-[100vh] lg:w-[14.5vw]">
+        <div className="flex flex-col items-center mx-[16px]">
           <img src={logo} alt="logo" className="mb-[24px] w-[100px]" />
-          <Link
-            to="/dashboard"
-            className={`flex flex-row items-center px-[24px] py-[8px] text-custom-darkGray mb-[8px] ${
-              location.pathname === "/dashboard" &&
-              "bg-white shadow-lg rounded-[10px] text-custom-primary"
-            }`}
-          >
-            <img
-              src={
-                location.pathname === "/dashboard" ? portfolio : portfolioDark
-              }
-              alt="portfolio"
-              className="h-[15px] w-[15px]"
-            />
-            <p className="ml-[4px] text-[14px] font-semibold ">My Portfolio</p>
-          </Link>
-          <div
-            className={`flex flex-row cursor-pointer text-custom-darkGray mb-[8px] px-[24px] items-center py-[8px] ${
-              location.pathname === "/My-Group" &&
-              "bg-white shadow-lg rounded-[10px] text-custom-primary"
-            }`}
-          >
-            <img src={group} alt="portfolio" />
-            <p className="ml-[4px] text-[14px] font-semibold">My Group</p>
-          </div>
-          <Link
-            to="/messages"
-            className={`flex flex-row items-center py-[8px] px-[24px] text-custom-darkGray mb-[8px] ${
-              location.pathname === "/messages" &&
-              "bg-white shadow-lg rounded-[10px] text-custom-primary"
-            }`}
-          >
-            <img
-              src={location.pathname === "/messages" ? messagesLight : messages}
-              alt="portfolio"
-            />
-            <p className="ml-[4px] text-[14px] font-semibold">Messages</p>
-          </Link>
-          <div
-            className={`flex flex-row cursor-pointer items-center text-custom-darkGray mb-[8px] px-[24px] py-[8px] ${
-              location.pathname === "/Analytics" &&
-              "bg-white shadow-lg rounded-[10px] text-custom-primary"
-            }`}
-          >
-            <img src={analytics} alt="portfolio" />
-            <p className="ml-[4px] text-[14px] font-semibold">Analytics</p>
-          </div>
-          <div
-            className={`flex flex-row cursor-pointer items-center text-custom-darkGray mb-[8px] px-[24px] py-[8px] ${
-              location.pathname === "/Pack" &&
-              "bg-white shadow-lg rounded-[10px] text-custom-primary"
-            }`}
-          >
-            <img src={pack} alt="portfolio" />
-            <p className="ml-[4px] text-[14px] font-semibold">Pack</p>
-          </div>
-          <div
-            className={`flex flex-row cursor-pointer items-center text-custom-darkGray mb-[8px] px-[24px] py-[8px] ${
-              location.pathname === "/Settings" &&
-              "bg-white shadow-lg rounded-[10px] text-custom-primary"
-            }`}
-          >
-            <img src={settings} alt="portfolio" />
-            <p className="ml-[4px] text-[14px] font-semibold">Settings</p>
-          </div>
-        </div>
 
-        <div className="flex flex-col items-center rounded-[20px] relative bg-white shadow-lg w-[90%] py-[24px]">
-          <img src={avatar} alt="avatar" className="absolute top-[-20px]" />
-          <p className="text-[16px] font-bold mt-[24px]">
-            {userDetails?.first_name} {userDetails?.last_name}
-          </p>
-          <p className="text-[14px]">Influencer</p>
-          <div
-            onClick={logOut}
-            className="flex flex-row cursor-pointer items-center mt-[16px] py-[4px] px-[16px] justify-center bg-opacity-[16%] rounded-[5px] bg-custom-primary"
-          >
-            <img src={logout} alt="logout" />
-            <p className="ml-[4px] text-custom-primary text-[14px]">LogOut</p>
-          </div>
+          <NavButton text="Dashboard" />
+          <NavButton text="KYC" />
+          <NavButton text="Support" />
+          <NavButton text="Settlements" />
+          <NavButton text="Account Mgt" />
+          <NavButton text="Customers" />
+          <NavButton text="Admin" />
+          <NavButton text="Payments" />
+          <NavButton text="Reports" />
+          <NavButton text="Info Center" />
+          <NavButton text="System Settings" />
         </div>
-      </div>
-
-      <div
-        style={{
-          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Adjust the values as per your requirement
-        }}
-        className={`${
-          location.pathname === "/dashboard" ||
-          location.pathname === "/messages"
-            ? "lg:hidden flex"
-            : "hidden"
-        } fixed justify-between flex-row w-[100vw] bg-white py-[10px] px-[16px]`}
-      >
-        <svg
-          width="25px"
-          viewBox="0 -2 32 32"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="#ff8600"
-        >
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g
-            id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></g>
-          <g id="SVGRepo_iconCarrier">
-            {" "}
-            <title>hamburger 2</title> <desc>Created with Sketch Beta.</desc>{" "}
-            <defs> </defs>{" "}
-            <g
-              id="Page-1"
-              stroke="none"
-              stroke-width="1"
-              fill="none"
-              fill-rule="evenodd"
-            >
-              {" "}
-              <g
-                id="Icon-Set-Filled"
-                transform="translate(-310.000000, -1039.000000)"
-                fill="#ff8600"
-              >
-                {" "}
-                <path
-                  d="M338,1049 L314,1049 C311.791,1049 310,1050.79 310,1053 C310,1055.21 311.791,1057 314,1057 L338,1057 C340.209,1057 342,1055.21 342,1053 C342,1050.79 340.209,1049 338,1049 L338,1049 Z M338,1059 L314,1059 C311.791,1059 310,1060.79 310,1063 C310,1065.21 311.791,1067 314,1067 L338,1067 C340.209,1067 342,1065.21 342,1063 C342,1060.79 340.209,1059 338,1059 L338,1059 Z M314,1047 L338,1047 C340.209,1047 342,1045.21 342,1043 C342,1040.79 340.209,1039 338,1039 L314,1039 C311.791,1039 310,1040.79 310,1043 C310,1045.21 311.791,1047 314,1047 L314,1047 Z"
-                  id="hamburger-2"
-                >
-                  {" "}
-                </path>{" "}
-              </g>{" "}
-            </g>{" "}
-          </g>
-        </svg>
-        <img src={logo} alt="logo" className="w-[85px] h-[25px]" />
       </div>
     </>
   );
