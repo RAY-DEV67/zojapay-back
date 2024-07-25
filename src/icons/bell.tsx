@@ -1,6 +1,5 @@
 function Bell() {
   return (
-    <div className="py-[12px] px-[12px] rounded-full bg-white">
       <svg
         width="25px"
         viewBox="0 0 24 24"
@@ -24,7 +23,6 @@ function Bell() {
           ></path>{" "}
         </g>
       </svg>
-    </div>
   );
 }
 

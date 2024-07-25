@@ -1,5 +1,9 @@
 import React from "react";
 import Bell from "../icons/bell";
+import FilterIcon from "../icons/filter";
+import DownArrowIcon from "../icons/downArrow";
+import LaptopIcon from "../icons/laptop";
+import avatar from "../assets/zojapayAvatar.png";
 
 interface DashboardHeadingProps {
   heading: string;
@@ -10,19 +14,19 @@ const DashboardHeading: React.FC<DashboardHeadingProps> = ({ heading }) => {
     <div className="lg:flex bg-white p-[16px] justify-between items-center flex-row w-[85.5vw] hidden fixed">
       <div className="flex flex-row items-center">
         <p className="text-[20px] font-bold mr-[20px]">{heading}</p>
-        <div className="border rounded-[10px] p-[8px] flex flex-row w-[200px] justify-between">
-          <p className="text-custom-darkGray font-bold text-[14px]">icon</p>
+        <div className="border rounded-[10px] p-[8px] flex flex-row w-[200px] justify-between items-center">
+          <FilterIcon />
           <p className="text-custom-darkGray font-bold text-[14px]">
             Advanced Filter
           </p>
-          <p className="text-custom-darkGray font-bold text-[14px]">icon</p>
+          <DownArrowIcon width="15px"/>
         </div>
       </div>
       <div className="flex flex-row items-center pr-[30px]">
-        <div className="py-[8px] px-[14px] mx-[8px] rounded-full bg-white">
-          <p className="font-bold">+</p>
+        <LaptopIcon />
+        <div className="py-[12px] px-[12px] rounded-full bg-white">
+          <Bell />
         </div>
-        <Bell />
         <div className="mx-[8px]">
           <div className="flex flex-row items-center">
             <p className="font-bold mr-[4px]">Wade Warren</p>
@@ -30,9 +34,7 @@ const DashboardHeading: React.FC<DashboardHeadingProps> = ({ heading }) => {
           </div>
           <p className="text-[14px]">Admin</p>
         </div>
-        <div className="py-[8px] px-[14px] mx-[8px] rounded-full bg-blue-400">
-          <p className="font-bold">+</p>
-        </div>
+        <img alt="Avatar" src={avatar} />
       </div>
     </div>
   );

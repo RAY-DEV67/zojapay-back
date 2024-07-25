@@ -44,10 +44,8 @@ const App: React.FC = () => {
         <ScrollToTop>
           <Routes>
             <Route path="/" element={<Login />} />
-
-            <Route element={<RequireAuth />}>
-              <Route path="/dashboard" element={<Dashboard />} />
-            </Route>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route element={<RequireAuth />}></Route>
           </Routes>
         </ScrollToTop>
         <ToastContainer />

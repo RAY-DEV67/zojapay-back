@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { loginUser } from "../../services/login";
-import { useDispatch } from "react-redux";
+// import { loginUser } from "../../services/login";
+// import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import Input from "../../components/input";
 import mail from "../../assets/mail.png";
@@ -13,10 +13,11 @@ import CTAButton from "../../components/button";
 function Login() {
   const [email, setemail] = useState("");
   const [userPassword, setuserPassword] = useState("");
-  const [loading, setloading] = useState(false);
+  // const [loading, setloading] = useState(false);
   const [showPassword, setshowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false); // Add this state
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+  const loading = false;
   const navigate = useNavigate();
 
   const toggleShowPassword = () => {

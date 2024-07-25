@@ -1,6 +1,13 @@
 import DashboardCard from "../../components/dashboardCard";
 import DashboardHeading from "../../components/dashboardHeading";
 import MyChart from "../../components/chart";
+import FilterIcon from "../../icons/filter";
+import dashbordIcon1 from "../../icons/dashboardIcon1.png";
+import dashbordIcon2 from "../../icons/dashboardIcon2.png";
+import dashbordIcon3 from "../../icons/dashboardIcon3.png";
+import dashbordIcon4 from "../../icons/dashboardIcon4.png";
+import PieCharts from "../../components/pieChart";
+
 function Dashboard() {
   const dummyData = [
     50, 395, 888, 200, 505, 348, 488, 200, 100, 300, 800, 1000,
@@ -13,6 +20,7 @@ function Dashboard() {
         <div className="lg:w-[23vw] bg-white h-[100vh] bg-opacity-[20%] ">
           <div className="flex lg:w-[23vw] gap-y-2 flex-col items-center justify-center lg:justify-between lg:h-[100px] py-[16px]">
             <DashboardCard
+              icon={dashbordIcon1}
               number1={500}
               number2={3400}
               text3="Completed Requests"
@@ -21,6 +29,7 @@ function Dashboard() {
               hover="green-100"
             />
             <DashboardCard
+              icon={dashbordIcon2}
               number1={3100}
               number2={120}
               text3="Reconciled Debit"
@@ -29,6 +38,7 @@ function Dashboard() {
               hover="green-100"
             />
             <DashboardCard
+              icon={dashbordIcon3}
               number1={30}
               number2={2000}
               text3="Resolved Tickets"
@@ -37,6 +47,7 @@ function Dashboard() {
               hover="green-100"
             />
             <DashboardCard
+              icon={dashbordIcon4}
               number1={60}
               number2={380}
               text3="Sub Agents"
@@ -48,7 +59,7 @@ function Dashboard() {
         </div>
 
         <div className="lg:w-[62vw] bg-[#f5f5f5] px-[16px]">
-          <div className="mt-[16px] flex flex-row">
+          <div className="mt-[24px] flex flex-row">
             <div className="flex flex-col items-start">
               <p className="text-[14px] font-bold">Total Income</p>
               <p className="text-[40px] text-bold text-[#89cff0]">19,990,560</p>
@@ -157,7 +168,7 @@ function Dashboard() {
       </div>
 
       <div className="flex flex-row mt-[-35vh] p-[16px] justify-between w-[100%]">
-        <div className="bg-white p-[16px] w-[44vw] rounded-[20px] mt-[16px] flex flex-row">
+        <div className="bg-white p-[16px] w-[44vw] rounded-[20px] mt-[16px] flex flex-row justify-between">
           <div>
             <div>
               <p className="text-[20px] font-bold text-custom-darkGray">
@@ -176,42 +187,42 @@ function Dashboard() {
               <div className="flex flex-row mt-[16px]">
                 <div className="mr-[16px]">
                   <div className="flex flex-row items-center mt-[16px]">
-                    <div className="w-[10px] mr-[8px] h-[10px] bg-red-400 rounded-full"></div>
+                    <div className="w-[10px] mr-[8px] h-[10px] bg-[#05F300] rounded-full"></div>
                     <p className="text-[10px] font-bold">
                       Cash requests/provision
                     </p>
                   </div>
                   <div className="flex flex-row items-center mt-[16px]">
-                    <div className="w-[10px] mr-[8px] h-[10px] bg-red-400 rounded-full"></div>
+                    <div className="w-[10px] mr-[8px] h-[10px] bg-[#EBC500] rounded-full"></div>
                     <p className="text-[10px] font-bold">Transfer-Zojapay</p>
                   </div>
                   <div className="flex flex-row items-center mt-[16px]">
-                    <div className="w-[10px] mr-[8px] h-[10px] bg-red-400 rounded-full"></div>
+                    <div className="w-[10px] mr-[8px] h-[10px] bg-[#981EF8] rounded-full"></div>
                     <p className="text-[10px] font-bold">
                       Airtime & Data Bills
                     </p>
                   </div>
                   <div className="flex flex-row items-center mt-[16px]">
-                    <div className="w-[10px] mr-[8px] h-[10px] bg-red-400 rounded-full"></div>
+                    <div className="w-[10px] mr-[8px] h-[10px] bg-[#FFD60A] rounded-full"></div>
                     <p className="text-[10px] font-bold">Electricity</p>
                   </div>
                 </div>
 
                 <div>
                   <div className="flex flex-row items-center mt-[16px]">
-                    <div className="w-[10px] mr-[8px] h-[10px] bg-red-400 rounded-full"></div>
+                    <div className="w-[10px] mr-[8px] h-[10px] bg-[#FF6C02] rounded-full"></div>
                     <p className="text-[10px] font-bold">
                       Transfer-other banks
                     </p>
                   </div>
                   <div className="flex flex-row items-center mt-[16px]">
-                    <div className="w-[10px] mr-[8px] h-[10px] bg-red-400 rounded-full"></div>
+                    <div className="w-[10px] mr-[8px] h-[10px] bg-[#1EEBF8] rounded-full"></div>
                     <p className="text-[10px] font-bold">
                       Other bills (Cable, betting, e.t.c)
                     </p>
                   </div>
                   <div className="flex flex-row items-center mt-[16px]">
-                    <div className="w-[10px] mr-[8px] h-[10px] bg-red-400 rounded-full"></div>
+                    <div className="w-[10px] mr-[8px] h-[10px] bg-[#2DBD9B] rounded-full"></div>
                     <p className="text-[10px] font-bold">Contactless Payment</p>
                   </div>
                 </div>
@@ -225,38 +236,8 @@ function Dashboard() {
             </div>
           </div>
 
-          <div className="w-[250px] h-[250px] ml-[4px] mt-[32px] flex flex-col items-center justify-center">
-            <MyChart
-              data={dummyData}
-              labels={[
-                "Jan",
-                "Feb",
-                "Mar",
-                "Apr",
-                "May",
-                "Jun",
-                "Jul",
-                "Aug",
-                "Sept",
-                "Oct",
-                "Nov",
-                "Dec",
-              ]}
-              backgroundColor={[
-                "#ff8600",
-                "#ff8600",
-                "#ff8600",
-                "#ff8600",
-                "#ff8600",
-              ]}
-              borderColor={[
-                "#ff8600",
-                "#ff8600",
-                "#ff8600",
-                "#ff8600",
-                "#ff8600",
-              ]}
-            />
+          <div className="w-[200px] ml-[4px] mt-[32px] flex flex-col items-center justify-center">
+            <PieCharts />
           </div>
         </div>
 
@@ -272,7 +253,7 @@ function Dashboard() {
               <p className="text-custom-primary mr-[8px] font-bold">
                 Filter Options
               </p>
-              <p>Icon</p>
+              <FilterIcon />
             </div>
           </div>
 
@@ -328,117 +309,6 @@ function Dashboard() {
           </div>
         </div>
       </div>
-
-      {/* <div className="lg:w-[60vw]">
-        <div className="bg-white p-[16px] mt-[16px] rounded-[20px]">
-          <p className="text-[18px] font-bold">Trending Posts</p>
-          <div className="flex flex-col lg:flex-row justify-between lg:mt-[24px]">
-            <TrendingPosts
-              heading="8 Upcoming Influencer Marketing Trends and Benefits"
-              text="Marketing is evolving. Its changing from a one-way street to a two-way
-              conversa...."
-            />
-            <TrendingPosts
-              heading="How Influencer Marketing Affects Consumer Buying Behavior"
-              text="As influencer marketing continues to grow, consumers have been turning
-              to their..."
-            />
-          </div>
-        </div>
-
-        <div className="bg-white p-[16px] mt-[16px] rounded-[20px]">
-          <p className="text-[20px] font-bold">Potential Members</p>
-          <div className="flex flex-row justify-center flex-wrap gap-2 mt-[16px] lg:justify-between">
-            <PotentialMembers
-              image={potential1}
-              name="Wanda Parker"
-              handle="@ashking127"
-              score="10.3%"
-            />
-            <PotentialMembers
-              image={potential2}
-              name="Terry Brown"
-              handle="@ashking127"
-              score="9.8%"
-            />
-            <PotentialMembers
-              image={potential3}
-              name="Lucas Holmes"
-              handle="@ashking127"
-              score="6.5%"
-            />
-            <PotentialMembers
-              image={potential4}
-              name="Janice Miler"
-              handle="@ashking127"
-              score="8.6%"
-            />
-            <PotentialMembers
-              image={potential5}
-              name="Terry Brown"
-              handle="@ashking127"
-              score="9.8%"
-            />
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div className="lg:ml-[61vw] mt-[16px] overflow-y-scroll pb-[100px] w-[40vw] mr-[16px] lg:w-[22vw] hidden lg:flex flex-col fixed h-[100vh]">
-        <div className="bg-white p-[16px] rounded-[20px] mt-[16px] mr-[8px] lg:mt-[0px]">
-          <div className="flex flex-row justify-between items-center">
-            <p className="text-[20px] font-bold">Watchlist</p>
-            <p className="text-[14px] text-custom-primary font-bold">
-              View all
-            </p>
-          </div>
-          <div className="flex flex-row flex-wrap justify-center items-center gap-y-3 mt-[16px] lg:justify-between lg:flex-col">
-            <img src={stocks1} alt="stocks" />
-            <img src={stocks2} alt="stocks" />
-          </div>
-        </div>
-
-        <div className="bg-white mt-[16px] mr-[8px] p-[16px] rounded-[20px]">
-          <p className="text-[20px] font-bold">Revenue</p>
-          <div className="flex flex-row flex-wrap items-center gap-y-3 mt-[16px] justify-between lg:flex-col">
-            <RevenueCard
-              icon={facebook}
-              amount="$4000"
-              text="Recently Added Pages"
-            />
-            <RevenueCard
-              icon={instagram}
-              amount="$2100"
-              text="Video Monitization"
-            />
-            <RevenueCard
-              icon={linkedIn}
-              amount="$1752"
-              text="Community Buildup"
-            />
-          </div>
-        </div>
-
-        <div className="bg-white mt-[16px] mr-[8px] p-[16px] rounded-[20px]">
-          <p className="text-[20px] font-bold">Trending News</p>
-          <div className="flex flex-col items-center gap-y-3 mt-[16px] justify-between">
-            <TrendingNewsCard
-              heading="Russia & Ukraine War"
-              text="Marketing is evolving. Its chang..."
-              icon={news1}
-            />
-            <TrendingNewsCard
-              heading="Elon Musk bought Twitter"
-              text="Twitter is the most useful socil pl..."
-              icon={news2}
-            />
-            <TrendingNewsCard
-              heading="Fuel Crisis Everywhere"
-              text="Due to covid situation in 2020 the... "
-              icon={news3}
-            />
-          </div>
-        </div> */}
-      {/* </div> */}
     </div>
   );
 }
