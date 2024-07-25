@@ -2,7 +2,6 @@ interface InputProps {
   placeholder: string;
   type: string;
   width: string;
-  icon: string;
   iconPosition: string;
   value: string;
   heading: string;

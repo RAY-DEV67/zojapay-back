@@ -3,9 +3,7 @@ import { useState } from "react";
 // import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import Input from "../../components/input";
-import mail from "../../assets/mail.png";
 import backgroundImage from "../../assets/zojapaybg.png";
-import password from "../../assets/password.png";
 import ShowPassword from "../../icons/showPassword";
 import HidePassword from "../../icons/hidePassword";
 import CTAButton from "../../components/button";
@@ -57,7 +55,6 @@ function Login() {
             heading="Email"
             value={email}
             setvalue={setemail}
-            icon={mail}
             iconPosition="25px"
             placeholder="Enter Your AD Email"
             type="text"
@@ -68,7 +65,6 @@ function Login() {
               heading="Password"
               value={userPassword}
               setvalue={setuserPassword}
-              icon={password}
               iconPosition="25px"
               placeholder="Enter Your AD Password"
               type={showPassword ? "text" : "password"}
