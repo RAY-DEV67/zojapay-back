@@ -90,9 +90,9 @@ function Dashboard() {
                 </div>
 
                 <div>
-                  <p className="text-[12px] text-[#009968]">ACTIVE</p>
+                  <p className="text-[12px] text-[#009968] font-bold">ACTIVE</p>
                   <p className="text-[12px]">7900</p>
-                  <p className="text-[12px] text-[#ff0000]">INACTIVE</p>
+                  <p className="text-[12px] text-[#ff0000] font-bold">INACTIVE</p>
                   <p className="text-[12px]">1400</p>
                 </div>
               </div>
@@ -158,7 +158,7 @@ function Dashboard() {
                   <p className="text-custom-primary font-bold">705</p>
                 </div>
 
-                <div className="border-[1px] border-[#ffd60a] px-[18px] py-[10px] rounded-[10px] ml-[24px]">
+                <div className="border-[1px] cursor-pointer border-[#ffd60a] px-[18px] py-[10px] rounded-[10px] ml-[24px]">
                   <p className="text-[#ffd60a] font-bold">Resolve</p>
                 </div>
               </div>
@@ -228,7 +228,7 @@ function Dashboard() {
                 </div>
               </div>
 
-              <div className="w-[100px] mt-[32px] bg-custom-primary py-[4px] px-[16px] rounded-[10px]">
+              <div className="w-[100px] cursor-pointer mt-[32px] bg-custom-primary py-[4px] px-[16px] rounded-[10px]">
                 <p className="text-[2.5vw] lg:text-[14px] text-white">
                   See More
                 </p>
